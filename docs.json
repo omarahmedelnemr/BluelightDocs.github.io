@@ -1,0 +1,554 @@
+[
+    {
+        "endpoint":"/student/Homework",
+        "method":"GET",
+        "description":"The Endpoint Used in get All Homework Assinged to Student's Class, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
+        "parameters":[
+
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives The List of Homework Assinged To That Class With No Deep Details, Just Homework Name and ID",
+        "responseExample":[
+            {
+                "id": 2,
+                "submitted": false,
+                "grade": null,
+                "homework": {
+                    "id": 2,
+                    "name": "First Sheet",
+                    "description": "Solve From Q1 to Q10:",
+                    "grade": 20,
+                    "publish_date": "2023-02-19T18:42:49.000Z",
+                    "due_date": "2023-02-19T18:42:50.000Z",
+                    "subject": {
+                        "id": 2,
+                        "teacherID": null,
+                        "name": "Physics",
+                        "score": 200
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/SubmittedHomework",
+        "method":"GET",
+        "description":"The Endpoint Used in get All Homework That Student Already Submit, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
+        "parameters":[
+
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives The List of Submitted Homework  To That Class With No Deep Details, Just Homework Name and ID",
+        "responseExample":[
+            {
+                "id": 2,
+                "submitted": false,
+                "grade": null,
+                "homework": {
+                    "id": 2,
+                    "name": "First Sheet",
+                    "description": "Solve From Q1 to Q10:",
+                    "grade": 20,
+                    "publish_date": "2023-02-19T18:42:49.000Z",
+                    "due_date": "2023-02-19T18:42:50.000Z",
+                    "subject": {
+                        "id": 2,
+                        "teacherID": null,
+                        "name": "Physics",
+                        "score": 200
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/HomeworkCount",
+        "method":"GET",
+        "description":"The Endpoint Used to get How Meny Homework are Assinged to Student's Class",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives a Number of Assigned Homework",
+        "responseExample":{
+            "count":2
+        }
+        
+    },
+    {
+        "endpoint":"/student/homeworkHeader",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Details like Homework Title, grades,   About Spicific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives all the Data Related To That Homework",
+        "responseExample":{
+                "id": 1,
+                "submitted": false,
+                "grade": null,
+                "homework": {
+                    "id": 1,
+                    "name": "Sheet 1",
+                    "description": "Solve The Following Questions:",
+                    "grade": 10,
+                    "publish_date": "2023-02-19T18:42:18.000Z",
+                    "due_date": "2023-02-19T18:42:18.000Z"
+                }
+            }
+        
+        
+        
+    },
+    {
+        "endpoint":"/student/HomeworkQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Questions in a Spicific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Questions in That Homework,<br/>the Received Parameter 'Type' Might Have Meny Value as Follows:<br/> <code classname='higlighted'>'smcq'</code> Means Single Choise MCQ Questions,<br/> <code classname='higlighted'>'mmcq'</code> Means Multiple Choise MCQ Question<br/> <code classname='higlighted'>'written'</code> Means Written Question,<br/> <code classname='higlighted'>'attach'</code> Mean Question Need Attachment ",
+        "responseExample":[
+            {
+                "id": 1,
+                "type": "smcq",
+                "QNumber": 1,
+                "questionText": "What is Woman",
+                "attachment": null,
+                "options": [
+                    {
+                        "id": 1,
+                        "isRight": false,
+                        "text": "only woman know"
+                    },
+                    {
+                        "id": 2,
+                        "isRight": true,
+                        "text": "Biological Creation"
+                    }
+                ]
+            }
+        ]
+        
+        
+    },
+    {
+        "endpoint":"/student/SubmittedHomeworkQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Spicific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
+        "responseExample":[
+            {
+                "id": 1,
+                "type": "smcq",
+                "QNumber": 1,
+                "questionText": "What is Woman",
+                "attachment": null,
+                "answers": {
+                    "id": 10,
+                    "answer": "",
+                    "attachment": null,
+                    "options": [
+                        {
+                            "checked": true,
+                            "option": {
+                                "id": 2,
+                                "isRight": true,
+                                "text": "Biological Creation"
+                            }
+                        },
+                        {
+                            "checked": false,
+                            "option": {
+                                "id": 1,
+                                "isRight": false,
+                                "text": "only woman know"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+        
+        
+    },
+    {
+        "endpoint":"/student/submitHomework",
+        "method":"POST",
+        "description":"The Endpoint Used to Submit Homework answers",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            },
+            {
+                "paramName":"answers",
+                "paramType":"Object",
+                "paramDescription":"Take The List Of Answers"
+            }
+            
+        ],
+        "requestExample":{
+            "studentID":1,
+            "homeworkID":1,
+            "answers":[
+                {
+                    "id": 1,
+                    "answer": "",
+                    "attachment": null,
+                    "options": [
+                        {
+                            "id": 2,
+                            "checked": true     
+                        },
+                        {
+                            "id": 1,
+                            "checked": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "responseDescription":"Receives 'Submitted Successfully!' if Every THing Went Well, or 'The Homework Was Already Submitted' if The Same Homework Has A Previus Submission",
+        "responseExample":"Submitted Successfully!"
+    },
+    {
+        "endpoint":"/student/unSubmitHomework",
+        "method":"DELETE",
+        "description":"The Endpoint Used to Unsubmit or Remove The Submission Data For Spicific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+            
+        ],
+        "requestExample":{
+            "homeworkID":1,
+            "studentID":1
+        },
+        "responseDescription":"Receives 'unSubmitted Successfully!' if Every Thing Went Well,or 'There is No Such Submission To Unsubmit' if The Submission Doesn't Exict",
+        "responseExample":"unSubmitted Successfully!"
+    },
+    {
+        "endpoint":"/student/events",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All The Events Assigned To The Student Class, Like A Class Trip",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Student's Classroom"
+            }
+            
+        ],
+        "responseDescription":"Receives a List of All Assigned Events",
+        "responseExample":[
+            {
+                "id": 1,
+                "seen": true,
+                "event": {
+                    "id": 1,
+                    "title": "Zoo Trip",
+                    "description": "Come to ZOO Next Friday",
+                    "attachment": null,
+                    "publish_date": "2023-04-25T03:32:01.000Z"
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/event",
+        "method":"Get",
+        "description":"The Endpoint Used to get a Spicific Event Info",
+        "parameters":[
+            {
+                "paramName":"targetID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Target (MenyToMeny JOin Table Entity ID)"
+            }
+            
+        ],
+        "responseDescription":"Receives All The Data Related To That Event",
+        "responseExample":{
+            "id": 1,
+            "seen": true,
+            "event": {
+                "id": 1,
+                "title": "Zoo Trip",
+                "description": "Come to ZOO Next Friday",
+                "attachment": null,
+                "publish_date": "2023-04-25T03:32:01.000Z"
+            }
+        }
+    },
+    {
+        "endpoint":"/Teacher/Homework",
+        "method":"post",
+        "description":"The Endpoint Used to Create New Homework and Assign it To Selected Classroom",
+        "parameters":[
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Assignment Name (Title)"
+            },
+            {
+                "paramName":"description",
+                "paramType":"String",
+                "paramDescription":"The description Of the Assignment (Default Null )"
+            },
+            {
+                "paramName":"grade",
+                "paramType":"Number",
+                "paramDescription":"The Grades for This Assignment"
+            },
+            {
+                "paramName":"publish_date",
+                "paramType":"Date",
+                "paramDescription":"Tells When The Assingment Was Published"
+            },
+            {
+                "paramName":"due",
+                "paramType":"array",
+                "paramDescription":"Tells When The Deadline for the Assingment Submission"
+            },
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"whitch Class Does The Assignment is Asssigned To"
+            },
+            {
+                "paramName":"courseID",
+                "paramType":"Number",
+                "paramDescription":"The Course ID of the Assingment Subject"
+            },
+            {
+                "paramName":"Questions",
+                "paramType":"Object",
+                "paramDescription":"The list of Questions Including the Options For Each Question"
+            }
+            
+        ],
+        "requestExample":{
+            "name":"sheet1",
+            "description":"solve it student asap",
+            "grade":10,
+            "publish_date":"2020-12-12 20:10:10",
+            "due":"2020-12-22 20:10:10",
+            "classroomID":"E3/2",
+            "courseID":1,
+            "Questions":[
+                {
+                    "type":"smcq",
+                    "QNumber":1,
+                    "questionText":"What is 3*3",
+                    "attachment":null,
+                    "options":[
+                        {
+                            "text":"9",
+                            "isRight":true
+                        },
+                        {
+                            "text":"6",
+                            "isRight":false
+                        },
+                        {
+                            "text":"1",
+                            "isRight":false
+                        }
+                    ]
+                }
+            ]
+        
+        
+        },
+        "responseDescription":"Receives 'Submitted Successfully!' if Everything Went Well",
+        "responseExample":"Submitted Successfully!"
+    },
+    {
+        "endpoint":"/Teacher/Homework",
+        "method":"delete",
+        "description":"The Endpoint Used to Create New Homework and Assign it To Selected Classroom",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"String",
+                "paramDescription":"Assignment Name (Title)"
+            }
+            
+        ],
+        "requestExample":{
+            "homeworkID":9
+        },
+        "responseDescription":"Receives 'Removed Successfully' if Everything Went Well",
+        "responseExample":"Removed Successfully"
+    },
+    {
+        "endpoint":"/Teacher/attendance",
+        "method":"post",
+        "description":"The Endpoint Used to take the Attendance of specific Classrooms",
+        "parameters":[
+            {
+                "paramName":"courseID",
+                "paramType":"String",
+                "paramDescription":"Take The ID of The Course"
+            },
+            {
+                "paramName":"date",
+                "paramType":"Date",
+                "paramDescription":"Take The Current Day"
+            },
+            {
+                "paramName":"names",
+                "paramType":"array",
+                "paramDescription":"The list of Student's Names and weather thay Attend or Not"
+            }
+            
+        ],
+        "requestExample":{
+            "courseID":"1",
+            "date":"2020-12-12",
+            "names":
+            [
+                {
+                    "studentID":4,
+                    "courseID":"1",
+                    "absent":true
+                },
+                {
+                    "studentID":3,
+                    "courseID":"1",
+                    "absent":false
+                }
+            ]   
+        },
+        "responseDescription":"Receives 'Submitted Successfully!' if Everything Went Well,or 'Not Found' if The Student ID Doesn't Exict",
+        "responseExample":"Submitted Successfully!"
+    },
+    {
+        "endpoint":"/Teacher/attendance",
+        "method":"DELETE",
+        "description":"The Endpoint Used to Delete or Unsumbit Attendance Record",
+        "parameters":[
+            {
+                "paramName":"courseID",
+                "paramType":"String",
+                "paramDescription":"Take The ID of The Course"
+            },
+            {
+                "paramName":"date",
+                "paramType":"Date",
+                "paramDescription":"Take The Current Day"
+            }
+            
+        ],
+        "requestExample":{
+            "courseID":"1",
+            "date":"2020-12-12 00:01:00"
+        },
+        "responseDescription":"Receives 'unSubmitted Successfully!' if Everything Went Well",
+        "responseExample":"unSubmitted Successfully!"
+    },
+    {
+        "endpoint":"/Teacher/event",
+        "method":"POST",
+        "description":"The Endpoint Used to Add New Event By a Teacher",
+        "parameters":[
+            {
+                "paramName":"targetID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Target (MenyToMeny JOin Table Entity ID)"
+            }
+        ],
+        "requestExample":{
+            "title":"testTitle",
+            "description":"TestDesc",
+            "publish_date":"2020-12-12 08:08:08",
+            "attachment":null,
+            "teacherID":1,
+            "targetClassrooms":["E3/2","E3/1"]
+        
+        },
+        "responseDescription":"Receives 'Done'",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Teacher/event",
+        "method":"delete",
+        "description":"The Endpoint Used to Delete an Event By a Teacher",
+        "parameters":[
+            {
+                "paramName":"eventID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The event"
+            }
+        ],
+        "requestExample":{
+            "eventID":3    
+        },
+        "responseDescription":"Receives 'Done'",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Parent/location",
+        "method":"GET",
+        "description":"get the lastest Location of Student and The Last Update Time",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives the Location and The Last Update Time",
+        "responseExample":{
+            "id": 1,
+            "lastLocation": "32.42.12.12",
+            "lastUpdate": "2023-04-26T01:53:09.000Z"
+        }
+    }
+
+]
