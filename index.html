@@ -32,6 +32,9 @@
 </head>
 
 <body class="one-content-column-version">
+    <div id = 'show_leftMenu_buttom'>
+        <p>></p>
+    </div>
 <div class="left-menu">
     <div class="content-logo">
         <div class="logo">
@@ -57,6 +60,9 @@
             </li>
             <li class="scroll-to-link" data-target="content-branches">
                 <a>Branches</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-admin">
+                <a>&emsp;&emsp;Admin</a>
             </li>
             <li class="scroll-to-link" data-target="content-student">
                 <a>&emsp;&emsp;Students</a>
@@ -84,7 +90,7 @@
             <h2>How to Use</h2>
             <p>
                 To get Started, You Have To Have The Base URL For The API, For Example :<br>
-                <code class="higlighted break-word">http://backendapi.bluelight.com/</code> <br/>"This is Currently unavilable as We Didn't Host our Server Yet"
+                <code class="higlighted break-word">http://api.bluelight.com/</code> <br/>"This is Currently unavilable as We Didn't Host our Server Yet"
             </p>
             <p>Then You Would Have to Follow The Instructions Below For How to Use Every Endpoint with A Correct Parameters</p>
             <!-- <br> -->
@@ -104,6 +110,20 @@
             </p>
             <p>For Example, To Use URL for Getting All Homewrok Assinged To Student, The URL Will Be Like:<br/> <code class="higlighted">https://backendapi.bluelight.com/student/getAllHomework</code></p>
         </div>
+        <div class="overflow-hidden content-section" id="content-admin">
+            <h2>Admin</h2>
+            <p>
+                This Branch is Responsible For Admin Panal, Which Allow To Add/Remove Critical Data Like Classrooms, Teachers, Students
+            </p>
+            <p>Here is All Endpoint That Can Be Used:</p>
+                <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
+            <div id="adminEndpointsList">
+                
+            </div>
+            <div id="adminEndpointsDetails"> 
+
+            </div>
+        </div>
         <div class="overflow-hidden content-section" id="content-student">
                 <h2>Students</h2>
                 <p>
@@ -111,7 +131,7 @@
                 </p>
                 <p>Here is All Endpoint That Can Be Used:</p>
                     <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
-                <div id="StudentEndpointsList">
+                <div id="studentEndpointsList">
                     
                 </div>
                 <div id="studentEndpointsDetails"> 
@@ -131,7 +151,21 @@
             <div id="teacherEndpointsDetails"> 
 
             </div>
-    </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-parent">
+            <h2>Parents</h2>
+            <p>
+                This Branch is Responsible For All Parnets Work: Tracking Homework, Exams, Submissions and More
+            </p>
+            <p>Here is All Endpoint That Can Be Used:</p>
+                <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
+            <div id="parentEndpointsList">
+                
+            </div>
+            <div id="parentEndpointsDetails"> 
+
+            </div>
+        </div>
     </div>
 </div>
 

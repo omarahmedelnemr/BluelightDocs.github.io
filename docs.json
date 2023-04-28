@@ -1,5 +1,57 @@
 [
     {
+        "endpoint":"/Admin/classroom",
+        "method":"POST",
+        "description":"Create New Classroom",
+        "parameters":[
+            {
+                "paramName":"schoolID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The School"
+            },
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"Desired id For Classroom, Usally the First letter of The Grade and Classroom Name like 'E3/2'"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For Classroom, Which Will Be Displayed in Student's Pages"
+            }
+            
+        ],
+        "requestExample":{
+            "schoolID":1,
+            "classroomID":"E3/2",
+            "name":"3/2"
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/Admin/classroom",
+        "method":"DELETE",
+        "description":"Delete Classroom Entity",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"Desired id For Classroom, Usally the First letter of The Grade and Classroom Name like 'E3/2'"
+            } 
+        ],
+        "requestExample":{
+            "classroomID":"E3/2"
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+
+
+
+
+
+
+    
+    {
         "endpoint":"/student/Homework",
         "method":"GET",
         "description":"The Endpoint Used in get All Homework Assinged to Student's Class, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",

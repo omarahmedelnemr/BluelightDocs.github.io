@@ -70,15 +70,20 @@ for(var i =0;i<jsonData.length;i++){
     // document.getElementById('studentEndpointsDetails').appendChild(htmlBuild)
     // document.getElementById('StudentEndpointsList').appendChild(ListhtmlBuild)
     const targetSection = item.endpoint.split('/')[1].toLowerCase()
+    console.log("#"+targetSection+"EndpointsDetails")
+    $("#"+targetSection+"EndpointsDetails").append(htmlBuild)
+    $("#"+targetSection+"EndpointsList").append(ListhtmlBuild)
 
-    if (targetSection == 'student'){
-        $("#studentEndpointsDetails").append(htmlBuild)
-        $("#StudentEndpointsList").append(ListhtmlBuild)
-    }else if (targetSection== 'teacher'){
-        $("#teacherEndpointsDetails").append(htmlBuild)
-        $("#teacherEndpointsList").append(ListhtmlBuild)
-    }
 }
+$("#show_leftMenu_buttom").click(()=>{
+    if ($(".left-menu").width() == 0){
+        $(".left-menu").width(300)
+        $("#show_leftMenu_buttom").text("<")
+    }else{
+        $(".left-menu").width(0)
+        $("#show_leftMenu_buttom").text(">")
+    }
+})
 /**
  
 <div id="studentgetallhomework">
