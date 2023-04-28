@@ -451,6 +451,10 @@ html.menu-opened .burger-menu-icon  .line3 {
 #show_leftMenu_buttom p{
     font-size: 20px;
 }
+
+#welcome{
+    padding: 50px 20px 0px;
+}
 @media (min-width: 950px) {
     .left-menu{
         width: 300px;
