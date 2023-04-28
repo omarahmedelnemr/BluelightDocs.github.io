@@ -447,11 +447,10 @@ html.menu-opened .burger-menu-icon  .line3 {
     height: 30px;
     text-align: center;
     border-radius: 100%;
-}
-#show_leftMenu_buttom p{
+    top: 5px;
+    left: 5px;
     font-size: 20px;
 }
-
 #welcome{
     padding: 50px 20px 0px;
 }
