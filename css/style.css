@@ -464,21 +464,24 @@ html.menu-opened .burger-menu-icon  .line3 {
     #show_leftMenu_buttom{
         display: none;
     }
+    #welcome{
+        display: none;
+    }
     .content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6,
-.content p,
-.content table,
-.content aside,
-.content dl,
-.content ul,
-.content ol,
-.content .central-overflow-x {
-    margin-right: 50%;
-}
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .content p,
+    .content table,
+    .content aside,
+    .content dl,
+    .content ul,
+    .content ol,
+    .content .central-overflow-x {
+        margin-right: 50%;
+    }
 }
 @media (max-width: 950px) {
     .left-menu{
@@ -488,6 +491,9 @@ html.menu-opened .burger-menu-icon  .line3 {
         margin-left: 0;
     }
     #show_leftMenu_buttom{
+        display: block;
+    }
+    #welcome{
         display: block;
     }
     .content h1,
