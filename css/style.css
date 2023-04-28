@@ -440,7 +440,7 @@ html.menu-opened .burger-menu-icon  .line3 {
 }
 
 #show_leftMenu_buttom{
-    background-color: #e3ffff;
+    background-color: #f5f5f5;
     z-index: 999;
     position: fixed;
     width: 30px;
