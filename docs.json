@@ -44,12 +44,346 @@
         },
         "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
     },
+    {
+        "endpoint":"/Admin/course",
+        "method":"POST",
+        "description":"Create New Course",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The Teacher"
+            },
+            {
+                "paramName":"classes",
+                "paramType":"Array",
+                "paramDescription":"The Array of Which Classrooms Will Be Registered in That Course"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For Course, Which Will Be Displayed in Course's Pages"
+            },
+            {
+                "paramName":"score",
+                "paramType":"Number",
+                "paramDescription":"Desired Score (Marks) For This Course, like Math is 100 Marks"
+            }  
+        ],
+        "requestExample":{
+            "teacherID":1,
+            "classes":["E3/1","E3/2","e3/3"],
+            "name":"Math",
+            "score":100
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/Admin/course",
+        "method":"delete",
+        "description":"Delete an Existing Course",
+        "parameters":[
+            {
+                "paramName":"courseID",
+                "paramType":"String",
+                "paramDescription":"The ID of The Desired Course"
+            }
+        ],
+        "requestExample":{
+            "courseID":"Math1"
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/Admin/student",
+        "method":"POST",
+        "description":"Add New Student",
+        "parameters":[
+            {
+                "paramName":"schoolID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The School"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For Student, Which Will Be Displayed in Student's Pages"
+            },
+            {
+                "paramName":"img_dir",
+                "paramType":"String",
+                "paramDescription":"the Link of Student's Profile Picture (Could Be Null)"
+            },
+            {
+                "paramName":"age",
+                "paramType":"Number",
+                "paramDescription":"The Age of the Student"
+            },
+            {
+                "paramName":"classroom",
+                "paramType":"String",
+                "paramDescription":"THe ID of the Classrom Which Student Will Be Registered in"
+            }
+        ],
+        "requestExample":{
+            "schoolID":1,
+            "name":"Omar Mohamed Ahmed Abd-ElSamee",
+            "img_dir":"",
+            "age":15,
+            "classroom":"E3/2"
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/Admin/student",
+        "method":"delete",
+        "description":"Remove a Student",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The Student"
+            }  
+        ],
+        "requestExample":{
+            "studentID":1
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/admin/studentClassroomEdit",
+        "method":"POST",
+        "description":"change the Classroom of the Student",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The Teacher"
+            },
+            {
+                "paramName":"classroom",
+                "paramType":"String",
+                "paramDescription":"The new Classroom For The Student"
+            }
+        ],
+        "requestExample":{
+            "studentID":1,
+            "classroom":"E3/1"
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/admin/studentInfoEdit",
+        "method":"POST",
+        "description":"change some Info about a student",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The student"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For The student, Which Will Be Displayed in student's Pages"
+            },
+            {
+                "paramName":"img_dir",
+                "paramType":"String",
+                "paramDescription":"the Link of student's Profile Picture (Could Be Null)"
+            },
+            {
+                "paramName":"age",
+                "paramType":"Number",
+                "paramDescription":"The Age of the Stduent"
+            }
+        ],
+        "requestExample":{
+            "studentID":1,
+            "name":"Mohamed Elsaid Slama",
+            "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
+            "age":13
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/admin/teacher",
+        "method":"POST",
+        "description":"Add New Teacher",
+        "parameters":[
+            {
+                "paramName":"schoolID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The School"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For The Teacher, Which Will Be Displayed in Teacher's Pages"
+            },
+            {
+                "paramName":"img_dir",
+                "paramType":"String",
+                "paramDescription":"the Link of Teacher's Profile Picture (Could Be Null)"
+            },
+            {
+                "paramName":"age",
+                "paramType":"Number",
+                "paramDescription":"The Age of the Teacher"
+            },
+            {
+                "paramName":"role",
+                "paramType":"String",
+                "paramDescription":"The Role of the Teacher in School (Responsible For Subject, Normal,other Roles)"
+            }
+        ],
+        "requestExample":{
+            "schoolID":1,
+            "name":"Mohamed Elsaid Slama",
+            "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
+            "age":41,
+            "role":"normal"
+
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/Admin/teacher",
+        "method":"delete",
+        "description":"Remove a Teacher",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The Student"
+            } 
+        ],
+        "requestExample":{
+            "teacherID":1
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/admin/teacherRoleEdit",
+        "method":"POST",
+        "description":"change the Role of the Teacher",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The Teacher"
+            },
+            {
+                "paramName":"role",
+                "paramType":"String",
+                "paramDescription":"The new Role of the Teacher in School (Responsible For Subject, Normal,other Roles)"
+            }
+        ],
+        "requestExample":{
+            "teacherID":1,
+            "role":"consultant"
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/admin/teacherInfoEdit",
+        "method":"POST",
+        "description":"change some Info about a Teacher",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The Teacher"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For The Teacher, Which Will Be Displayed in Teacher's Pages"
+            },
+            {
+                "paramName":"img_dir",
+                "paramType":"String",
+                "paramDescription":"the Link of Teacher's Profile Picture (Could Be Null)"
+            },
+            {
+                "paramName":"age",
+                "paramType":"Number",
+                "paramDescription":"The Age of the Teacher"
+            }
+        ],
+        "requestExample":{
+            "teacherID":1,
+            "name":"Mohamed Elsaid Slama",
+            "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
+            "age":41
+        },
+        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+
+
+
+
+
+    {
+        "endpoint":"/admin/allStudents",
+        "method":"Get",
+        "description":"Return all Students In The School",
+        "responseExample":[
+            {
+                "id": 8,
+                "name": "Omar Mohamed Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 14
+            },
+            {
+                "id": 9,
+                "name": "Mohamed Omar Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 15
+            },
+            {
+                "id": 10,
+                "name": "Ahmed Mohamed Omar Abd-ElSamee",
+                "img_dir": "",
+                "age": 14
+            }
+        ],
+        "responseDescription":"Receives a List of All Students in The School if Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/admin/allTeachers",
+        "method":"Get",
+        "description":"Return all Teachers In The School",
+        "responseExample":[
+            {
+                "id": 8,
+                "name": "Omar Mohamed Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 41
+            },
+            {
+                "id": 9,
+                "name": "Mohamed Omar Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 43
+            },
+            {
+                "id": 10,
+                "name": "Ahmed Mohamed Omar Abd-ElSamee",
+                "img_dir": "",
+                "age": 35
+            }
+        ],
+        "responseDescription":"Receives a List of All Teacher in The School if Went Well, OtherWise, Reacives one of the Common Errors"
+    },
 
 
 
 
 
 
+
+    
     
     {
         "endpoint":"/student/Homework",
