@@ -319,11 +319,6 @@
         },
         "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
     },
-
-
-
-
-
     {
         "endpoint":"/admin/allStudents",
         "method":"Get",
@@ -374,7 +369,7 @@
                 "age": 35
             }
         ],
-        "responseDescription":"Receives a List of All Teacher in The School if Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives a List of All Teachers in The School if Went Well, OtherWise, Reacives one of the Common Errors"
     },
 
 
