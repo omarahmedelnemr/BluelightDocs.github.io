@@ -207,6 +207,32 @@
         "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
+        "endpoint":"/admin/allStudents",
+        "method":"Get",
+        "description":"Return all Students In The School",
+        "responseExample":[
+            {
+                "id": 8,
+                "name": "Omar Mohamed Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 14
+            },
+            {
+                "id": 9,
+                "name": "Mohamed Omar Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 15
+            },
+            {
+                "id": 10,
+                "name": "Ahmed Mohamed Omar Abd-ElSamee",
+                "img_dir": "",
+                "age": 14
+            }
+        ],
+        "responseDescription":"Receives a List of All Students in The School if Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
         "endpoint":"/admin/teacher",
         "method":"POST",
         "description":"Add New Teacher",
@@ -318,32 +344,6 @@
             "age":41
         },
         "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
-    },
-    {
-        "endpoint":"/admin/allStudents",
-        "method":"Get",
-        "description":"Return all Students In The School",
-        "responseExample":[
-            {
-                "id": 8,
-                "name": "Omar Mohamed Ahmed Abd-ElSamee",
-                "img_dir": "",
-                "age": 14
-            },
-            {
-                "id": 9,
-                "name": "Mohamed Omar Ahmed Abd-ElSamee",
-                "img_dir": "",
-                "age": 15
-            },
-            {
-                "id": 10,
-                "name": "Ahmed Mohamed Omar Abd-ElSamee",
-                "img_dir": "",
-                "age": 14
-            }
-        ],
-        "responseDescription":"Receives a List of All Students in The School if Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/allTeachers",
