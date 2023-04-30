@@ -37,24 +37,25 @@ for(var i =0;i<jsonData.length;i++){
     }else if (item.method.toLowerCase() == "put"){
         color ='colorYellow'
     }
-    var ListhtmlBuild = '&ensp;&ensp;<a href="#'+item.method.toLowerCase()+id+'"><code class="higlighted">'+item.endpoint+'</code></a>'
+    var ListhtmlBuild = '&ensp;&ensp;<a href="#'+item.method.toLowerCase()+id+'"><code class="higlighted">'+item.endpoint.toLowerCase()+'</code></a>'
     var htmlBuild = '<div id="'+item.method.toLowerCase()+id+'">\
                     <h3>'+item.endpoint+' <span class="methodType '+color+'">'+item.method.toUpperCase()+'</span></h3>\
-                    <p>'+item.description+'</p>\
-                    <h4>Parameters:</h4>\
-                    <table>\
-                    <thead>\
-                    <tr>\
-                        <th>Parmeters</th>\
-                        <th>Type</th>\
-                        <th>Description</th>\
-                    </tr>\
-                    </thead>\
-                    <tbody>'
-    for(var tr =0;tr<item.parameters.length;tr++){
-        htmlBuild+= '<tr> <td>'+item.parameters[tr].paramName+'</td><td>'+item.parameters[tr].paramType+'</td><td>'+item.parameters[tr].paramDescription+'</td></tr>'
+                    <p>'+item.description+'</p>'
+    if (item['parameters'] != undefined){
+        htmlBuild+='<h4>Parameters:</h4>\
+        <table>\
+        <thead>\
+        <tr>\
+            <th>Parmeters</th>\
+            <th>Type</th>\
+            <th>Description</th>\
+        </tr>\
+        </thead>\
+        <tbody>'
+        for(var tr =0;tr<item.parameters.length;tr++){
+            htmlBuild+= '<tr> <td>'+item.parameters[tr].paramName+'</td><td>'+item.parameters[tr].paramType+'</td><td>'+item.parameters[tr].paramDescription+'</td></tr>'
+        }
     }
-
 
     htmlBuild+='</tbody></table><h4>Response:</h4><p>'+item.responseDescription+'</p>'
          
