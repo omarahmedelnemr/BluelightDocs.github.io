@@ -39,7 +39,7 @@ for(var i =0;i<jsonData.length;i++){
     }
     var ListhtmlBuild = '&ensp;&ensp;<a href="#'+item.method.toLowerCase()+id+'"><code class="higlighted">'+item.endpoint.toLowerCase()+'</code> <span>'+item.method.toUpperCase()+'</span></a>'
     var htmlBuild = '<div id="'+item.method.toLowerCase()+id+'" class = "singleEndpoint">\
-                    <h3>'+item.endpoint+' <span class="methodType '+color+'">'+item.method.toUpperCase()+'</span></h3>\
+                    <h3>'+item.endpoint.toLowerCase()+' <span class="methodType '+color+'">'+item.method.toUpperCase()+'</span></h3>\
                     <p>'+item.description+'</p>'
     if (item['parameters'] != undefined){
         htmlBuild+='<h4>Parameters:</h4>\

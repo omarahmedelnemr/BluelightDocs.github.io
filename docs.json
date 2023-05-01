@@ -374,6 +374,291 @@
 
 
 
+    
+    {
+        "endpoint":"/admin/allTeachers",
+        "method":"Get",
+        "description":"Return all Teachers In The School",
+        "responseExample":[
+            {
+                "id": 8,
+                "name": "Omar Mohamed Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 41
+            },
+            {
+                "id": 9,
+                "name": "Mohamed Omar Ahmed Abd-ElSamee",
+                "img_dir": "",
+                "age": 43
+            },
+            {
+                "id": 10,
+                "name": "Ahmed Mohamed Omar Abd-ElSamee",
+                "img_dir": "",
+                "age": 35
+            }
+        ],
+        "responseDescription":"Receives a List of All Teachers in The School if Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+
+
+
+    {
+        "endpoint":"/Parent/location",
+        "method":"GET",
+        "description":"get the lastest Location of Student and The Last Update Time",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives the Location and The Last Update Time",
+        "responseExample":{
+            "id": 1,
+            "lastLocation": "32.42.12.12",
+            "lastUpdate": "2023-04-26T01:53:09.000Z"
+        }
+    },
+    {
+        "endpoint":"/Parent/assignedHomeworkList",
+        "method":"GET",
+        "description":"get a List Of the Homework Assignemt to The Student Weather Submitted or Not",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives a List Of the Homework Assignemt to The Student",
+        "responseExample":[
+            {
+                "id": 23,
+                "submitted": false,
+                "grade": null,
+                "homework": {
+                    "id": 19,
+                    "name": "sheet1",
+                    "description": "solve it The  Following",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T18:10:10.000Z",
+                    "due_date": null
+                }
+            },
+            {
+                "id": 24,
+                "submitted": true,
+                "grade": null,
+                "homework": {
+                    "id": 21,
+                    "name": "sheet2",
+                    "description": "solve next Questions",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T18:10:10.000Z",
+                    "due_date": null
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/Parent/assignedExamList",
+        "method":"GET",
+        "description":"get a List Of the Exams Assignemt to The Student Weather Submitted or Not",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives a List Of the Exams Assignemt to The Student",
+        "responseExample":[
+            {
+                "id": 23,
+                "submitted": false,
+                "grade": null,
+                "exams": {
+                    "id": 19,
+                    "name": "sheet1",
+                    "description": "solve it The  Following",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T18:10:10.000Z",
+                    "due_date": null
+                }
+            },
+            {
+                "id": 24,
+                "submitted": true,
+                "grade": null,
+                "homework": {
+                    "id": 21,
+                    "name": "sheet2",
+                    "description": "solve next Questions",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T18:10:10.000Z",
+                    "due_date": null
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/Parent/submittedHomework",
+        "method":"GET",
+        "description":"get a Details About Specific Homework That Student has Submitted",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives a Homework Details ",
+        "responseExample":{
+            "headers": {
+                "id": 24,
+                "submitted": true,
+                "grade": null,
+                "homework": {
+                    "id": 21,
+                    "name": "sheet2",
+                    "description": "solve it student asap",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T18:10:10.000Z",
+                    "due_date": null
+                }
+            },
+            "questions": [
+                {
+                    "id": 17,
+                    "type": "smcq",
+                    "QNumber": 1,
+                    "questionText": "What is 3*3",
+                    "attachment": null,
+                    "answers": {
+                        "id": 1,
+                        "answer": null,
+                        "attachment": null,
+                        "options": [
+                            {
+                                "checked": true,
+                                "option": {
+                                    "id": 44,
+                                    "isRight": true,
+                                    "text": "9"
+                                }
+                            },
+                            {
+                                "checked": false,
+                                "option": {
+                                    "id": 45,
+                                    "isRight": false,
+                                    "text": "6"
+                                }
+                            },
+                            {
+                                "checked": false,
+                                "option": {
+                                    "id": 46,
+                                    "isRight": false,
+                                    "text": "1"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "endpoint":"/Parent/submittedExam",
+        "method":"GET",
+        "description":"get a Details About Specific Homework That Student has Submitted",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives a Homework Details ",
+        "responseExample":{
+            "headers": {
+                "id": 24,
+                "submitted": true,
+                "grade": null,
+                "homework": {
+                    "id": 21,
+                    "name": "sheet2",
+                    "description": "solve it student asap",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T18:10:10.000Z",
+                    "due_date": null
+                }
+            },
+            "questions": [
+                {
+                    "id": 17,
+                    "type": "smcq",
+                    "QNumber": 1,
+                    "questionText": "What is 3*3",
+                    "attachment": null,
+                    "answers": {
+                        "id": 1,
+                        "answer": null,
+                        "attachment": null,
+                        "options": [
+                            {
+                                "checked": true,
+                                "option": {
+                                    "id": 44,
+                                    "isRight": true,
+                                    "text": "9"
+                                }
+                            },
+                            {
+                                "checked": false,
+                                "option": {
+                                    "id": 45,
+                                    "isRight": false,
+                                    "text": "6"
+                                }
+                            },
+                            {
+                                "checked": false,
+                                "option": {
+                                    "id": 46,
+                                    "isRight": false,
+                                    "text": "1"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+
+    
+
+
+
+
+
+
+
 
 
 
@@ -381,7 +666,7 @@
     
     
     {
-        "endpoint":"/student/Homework",
+        "endpoint":"/student/Homeworklist",
         "method":"GET",
         "description":"The Endpoint Used in get All Homework Assinged to Student's Class, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
         "parameters":[
@@ -912,24 +1197,6 @@
         },
         "responseDescription":"Receives 'Done'",
         "responseExample":"Done"
-    },
-    {
-        "endpoint":"/Parent/location",
-        "method":"GET",
-        "description":"get the lastest Location of Student and The Last Update Time",
-        "parameters":[
-            {
-                "paramName":"studentID",
-                "paramType":"number",
-                "paramDescription":"Take The ID of The Student"
-            }
-        ],
-        "responseDescription":"Receives the Location and The Last Update Time",
-        "responseExample":{
-            "id": 1,
-            "lastLocation": "32.42.12.12",
-            "lastUpdate": "2023-04-26T01:53:09.000Z"
-        }
     }
 
 ]
