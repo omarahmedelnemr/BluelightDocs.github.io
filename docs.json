@@ -588,12 +588,12 @@
                 "paramDescription":"Take The ID of The Student"
             },
             {
-                "paramName":"homeworkID",
+                "paramName":"examID",
                 "paramType":"number",
                 "paramDescription":"Take The ID of The Homework"
             }
         ],
-        "responseDescription":"Receives a Homework Details ",
+        "responseDescription":"Receives a Exam Details ",
         "responseExample":{
             "headers": {
                 "id": 24,
@@ -663,7 +663,7 @@
 
 
 
-    
+
     
     {
         "endpoint":"/student/Homeworklist",
