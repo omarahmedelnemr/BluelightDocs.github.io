@@ -26,7 +26,7 @@
             "classroomID":"E3/2",
             "name":"3/2"
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/classroom",
@@ -42,7 +42,7 @@
         "requestExample":{
             "classroomID":"E3/2"
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/course",
@@ -76,7 +76,7 @@
             "name":"Math",
             "score":100
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/course",
@@ -92,7 +92,7 @@
         "requestExample":{
             "courseID":"Math1"
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/student",
@@ -132,7 +132,7 @@
             "age":15,
             "classroom":"E3/2"
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/student",
@@ -148,7 +148,7 @@
         "requestExample":{
             "studentID":1
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/studentClassroomEdit",
@@ -170,7 +170,7 @@
             "studentID":1,
             "classroom":"E3/1"
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/studentInfoEdit",
@@ -204,7 +204,7 @@
             "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
             "age":13
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/allStudents",
@@ -271,7 +271,7 @@
             "role":"normal"
 
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/teacher",
@@ -287,7 +287,7 @@
         "requestExample":{
             "teacherID":1
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/teacherRoleEdit",
@@ -309,7 +309,7 @@
             "teacherID":1,
             "role":"consultant"
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/teacherInfoEdit",
@@ -343,7 +343,7 @@
             "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
             "age":41
         },
-        "responseDescription":"Receives 'Done' if Everything Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/admin/allTeachers",
@@ -651,24 +651,12 @@
         }
     },
 
-    
-
-
-
-
-
-
-
-
-
-
-
 
     
     {
-        "endpoint":"/student/Homeworklist",
+        "endpoint":"/student/HomeworkList",
         "method":"GET",
-        "description":"The Endpoint Used in get All Homework Assinged to Student's Class, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
+        "description":"The Endpoint Used in get All Homework List Assinged to Student's Class, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
         "parameters":[
 
             {
@@ -701,7 +689,7 @@
         ]
     },
     {
-        "endpoint":"/student/SubmittedHomework",
+        "endpoint":"/student/SubmittedHomeworkList",
         "method":"GET",
         "description":"The Endpoint Used in get All Homework That Student Already Submit, the Homework Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
         "parameters":[
@@ -738,7 +726,7 @@
     {
         "endpoint":"/student/HomeworkCount",
         "method":"GET",
-        "description":"The Endpoint Used to get How Meny Homework are Assinged to Student's Class",
+        "description":"The Endpoint Used to get How Meny Homework are Assinged to Student's Class and are Not Submitted yet",
         "parameters":[
             {
                 "paramName":"studentID",
@@ -755,7 +743,7 @@
     {
         "endpoint":"/student/homeworkHeader",
         "method":"GET",
-        "description":"The Endpoint Used to Get All Details like Homework Title, grades,   About Spicific Homework using it's ID",
+        "description":"The Endpoint Used to Get All Details like Homework Title, grades,   About Specific Homework using it's ID",
         "parameters":[
             {
                 "paramName":"homeworkID",
@@ -784,7 +772,7 @@
     {
         "endpoint":"/student/HomeworkQuestions",
         "method":"GET",
-        "description":"The Endpoint Used to Get All Questions in a Spicific Homework using it's ID",
+        "description":"The Endpoint Used to Get All Questions in a Specific Homework using it's ID",
         "parameters":[
             {
                 "paramName":"homeworkID",
@@ -793,34 +781,42 @@
             }
         ],
         "responseDescription":"Receives a list of all the Questions in That Homework,<br/>the Received Parameter 'Type' Might Have Meny Value as Follows:<br/> <code classname='higlighted'>'smcq'</code> Means Single Choise MCQ Questions,<br/> <code classname='higlighted'>'mmcq'</code> Means Multiple Choise MCQ Question<br/> <code classname='higlighted'>'written'</code> Means Written Question,<br/> <code classname='higlighted'>'attach'</code> Mean Question Need Attachment ",
-        "responseExample":[
-            {
-                "id": 1,
-                "type": "smcq",
-                "QNumber": 1,
-                "questionText": "What is Woman",
-                "attachment": null,
-                "options": [
+        "responseExample":{
+            "questions": [
+                {
+                    "id": 17,
+                    "type": "smcq",
+                    "QNumber": 1,
+                    "questionText": "What is 3*3",
+                    "attachment": null
+                }
+            ],
+            "options": [
+                [
                     {
-                        "id": 1,
-                        "isRight": false,
-                        "text": "only woman know"
+                        "id": 44,
+                        "isRight": true,
+                        "text": "9"
                     },
                     {
-                        "id": 2,
-                        "isRight": true,
-                        "text": "Biological Creation"
+                        "id": 45,
+                        "isRight": false,
+                        "text": "6"
+                    },
+                    {
+                        "id": 46,
+                        "isRight": false,
+                        "text": "1"
                     }
                 ]
-            }
-        ]
-        
+            ]
+        }
         
     },
     {
         "endpoint":"/student/SubmittedHomeworkQuestions",
         "method":"GET",
-        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Spicific Homework using it's ID",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Specific Homework using it's ID",
         "parameters":[
             {
                 "paramName":"studentID",
@@ -836,30 +832,38 @@
         "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
         "responseExample":[
             {
-                "id": 1,
+                "id": 17,
                 "type": "smcq",
                 "QNumber": 1,
-                "questionText": "What is Woman",
+                "questionText": "What is 3*3",
                 "attachment": null,
                 "answers": {
-                    "id": 10,
-                    "answer": "",
+                    "id": 1,
+                    "answer": null,
                     "attachment": null,
                     "options": [
                         {
                             "checked": true,
                             "option": {
-                                "id": 2,
+                                "id": 44,
                                 "isRight": true,
-                                "text": "Biological Creation"
+                                "text": "9"
                             }
                         },
                         {
                             "checked": false,
                             "option": {
-                                "id": 1,
+                                "id": 45,
                                 "isRight": false,
-                                "text": "only woman know"
+                                "text": "6"
+                            }
+                        },
+                        {
+                            "checked": false,
+                            "option": {
+                                "id": 46,
+                                "isRight": false,
+                                "text": "1"
                             }
                         }
                     ]
@@ -870,7 +874,7 @@
         
     },
     {
-        "endpoint":"/student/submitHomework",
+        "endpoint":"/student/homeworkSubmission",
         "method":"POST",
         "description":"The Endpoint Used to Submit Homework answers",
         "parameters":[
@@ -912,13 +916,13 @@
                 }
             ]
         },
-        "responseDescription":"Receives 'Submitted Successfully!' if Every THing Went Well, or 'The Homework Was Already Submitted' if The Same Homework Has A Previus Submission",
-        "responseExample":"Submitted Successfully!"
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
     },
     {
-        "endpoint":"/student/unSubmitHomework",
+        "endpoint":"/student/homeworkSubmission",
         "method":"DELETE",
-        "description":"The Endpoint Used to Unsubmit or Remove The Submission Data For Spicific Homework using it's ID",
+        "description":"The Endpoint Used to Unsubmit or Remove The Submission Data For Specific Homework using it's ID",
         "parameters":[
             {
                 "paramName":"studentID",
@@ -936,8 +940,343 @@
             "homeworkID":1,
             "studentID":1
         },
-        "responseDescription":"Receives 'unSubmitted Successfully!' if Every Thing Went Well,or 'There is No Such Submission To Unsubmit' if The Submission Doesn't Exict",
-        "responseExample":"unSubmitted Successfully!"
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "endpoint":"/student/ExamsList",
+        "method":"GET",
+        "description":"The Endpoint Used in get All Exams List Assinged to Student's Class, the Exams Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
+        "parameters":[
+
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives The List of Exams Assinged To That Class With No Deep Details",
+        "responseExample":[
+            {
+                "id": 2,
+                "submitted": false,
+                "grade": null,
+                "exam": {
+                    "id": 2,
+                    "name": "First Sheet",
+                    "description": "Solve From Q1 to Q10:",
+                    "grade": 20,
+                    "publish_date": "2023-02-19T18:42:49.000Z",
+                    "due_date": "2023-02-19T18:42:50.000Z",
+                    "subject": {
+                        "id": 2,
+                        "teacherID": null,
+                        "name": "Physics",
+                        "score": 200
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/SubmittedExamsList",
+        "method":"GET",
+        "description":"The Endpoint Used in get All Exams That Student Already Submit, the Exams Will Not Be In Detail Just the Name,Total Marks,Due Data, and The Name Of the Subject",
+        "parameters":[
+
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives The List of Submitted Exams  To That Class With No Deep Details",
+        "responseExample":[
+            {
+                "id": 2,
+                "submitted": false,
+                "grade": null,
+                "exam": {
+                    "id": 2,
+                    "name": "First Sheet",
+                    "description": "Solve From Q1 to Q10:",
+                    "grade": 20,
+                    "publish_date": "2023-02-19T18:42:49.000Z",
+                    "due_date": "2023-02-19T18:42:50.000Z",
+                    "subject": {
+                        "id": 2,
+                        "teacherID": null,
+                        "name": "Physics",
+                        "score": 200
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/ExamsCount",
+        "method":"GET",
+        "description":"The Endpoint Used to get How Meny Exams are Assinged to Student's Class and are Not Submitted yet",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives a Number of Assigned Exams",
+        "responseExample":{
+            "count":2
+        }
+        
+    },
+    {
+        "endpoint":"/student/examHeader",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Details like Exam Title, grades,   About Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The exam"
+            }
+        ],
+        "responseDescription":"Receives all the Data Related To That Exam",
+        "responseExample":{
+                "id": 1,
+                "submitted": false,
+                "grade": null,
+                "exam": {
+                    "id": 1,
+                    "name": "Sheet 1",
+                    "description": "Solve The Following Questions:",
+                    "grade": 10,
+                    "publish_date": "2023-02-19T18:42:18.000Z",
+                    "due_date": "2023-02-19T18:42:18.000Z"
+                }
+            }
+        
+        
+        
+    },
+    {
+        "endpoint":"/student/ExamQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Questions in a Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Questions in That Exam,<br/>the Received Parameter 'Type' Might Have Meny Value as Follows:<br/> <code classname='higlighted'>'smcq'</code> Means Single Choise MCQ Questions,<br/> <code classname='higlighted'>'mmcq'</code> Means Multiple Choise MCQ Question<br/> <code classname='higlighted'>'written'</code> Means Written Question,<br/> <code classname='higlighted'>'attach'</code> Mean Question Need Attachment ",
+        "responseExample":{
+            "questions": [
+                {
+                    "id": 17,
+                    "type": "smcq",
+                    "QNumber": 1,
+                    "questionText": "What is 3*3",
+                    "attachment": null
+                }
+            ],
+            "options": [
+                [
+                    {
+                        "id": 44,
+                        "isRight": true,
+                        "text": "9"
+                    },
+                    {
+                        "id": 45,
+                        "isRight": false,
+                        "text": "6"
+                    },
+                    {
+                        "id": 46,
+                        "isRight": false,
+                        "text": "1"
+                    }
+                ]
+            ]
+        }
+        
+    },
+    {
+        "endpoint":"/student/SubmittedExamsQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Submitted Questions in That Exam,With Their answer",
+        "responseExample":[
+            {
+                "id": 17,
+                "type": "smcq",
+                "QNumber": 1,
+                "questionText": "What is 3*3",
+                "attachment": null,
+                "answers": {
+                    "id": 1,
+                    "answer": null,
+                    "attachment": null,
+                    "options": [
+                        {
+                            "checked": true,
+                            "option": {
+                                "id": 44,
+                                "isRight": true,
+                                "text": "9"
+                            }
+                        },
+                        {
+                            "checked": false,
+                            "option": {
+                                "id": 45,
+                                "isRight": false,
+                                "text": "6"
+                            }
+                        },
+                        {
+                            "checked": false,
+                            "option": {
+                                "id": 46,
+                                "isRight": false,
+                                "text": "1"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+        
+        
+    },
+    {
+        "endpoint":"/student/examSubmission",
+        "method":"POST",
+        "description":"The Endpoint Used to Submit Exam answers",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            },
+            {
+                "paramName":"answers",
+                "paramType":"Object",
+                "paramDescription":"Take The List Of Answers"
+            }
+            
+        ],
+        "requestExample":{
+            "studentID":1,
+            "examID":1,
+            "answers":[
+                {
+                    "id": 1,
+                    "answer": "",
+                    "attachment": null,
+                    "options": [
+                        {
+                            "id": 2,
+                            "checked": true     
+                        },
+                        {
+                            "id": 1,
+                            "checked": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/student/examSubmission",
+        "method":"DELETE",
+        "description":"The Endpoint Used to Unsubmit or Remove The Submission Data For Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+            
+        ],
+        "requestExample":{
+            "examID":1,
+            "studentID":1
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+
+
+    {
+        "endpoint":"/student/CourseAnnouncement",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Announcements Posted in That Course",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Student's Classroom"
+            }, 
+            {
+                "paramName":"courseID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Course"
+            }
+            
+        ],
+        "responseDescription":"Receives a List of All Course Announcements",
+        "responseExample":[
+            {
+                "id": 1,
+                "publishDate": "2023-03-01T15:51:38.000Z",
+                "title": "Hello Every One",
+                "bodyText": "We Are Happy To Have You All",
+                "attachment": "."
+            }
+        ]
     },
     {
         "endpoint":"/student/events",
@@ -969,7 +1308,7 @@
     {
         "endpoint":"/student/event",
         "method":"Get",
-        "description":"The Endpoint Used to get a Spicific Event Info",
+        "description":"The Endpoint Used to get a Specific Event Info",
         "parameters":[
             {
                 "paramName":"targetID",
@@ -991,6 +1330,45 @@
             }
         }
     },
+    {
+        "endpoint":"/student/Attendance",
+        "method":"Get",
+        "description":"The Endpoint Used to Show Student Attendance Records",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+        ],
+        "responseDescription":"Receives a list showing Student's Absense Times In Each Course ",
+        "responseExample":[
+            {
+                "id": 4,
+                "absent": true,
+                "date": "2023-05-01T21:13:08.000Z",
+                "course": {
+                    "id": 2,
+                    "teacherID": null,
+                    "name": "Physics",
+                    "score": 200
+                }
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+    
     {
         "endpoint":"/Teacher/Homework",
         "method":"post",
@@ -1071,7 +1449,7 @@
         
         
         },
-        "responseDescription":"Receives 'Submitted Successfully!' if Everything Went Well",
+        "responseDescription":"Receives 'Submitted Successfully!' if EveryThing Went Well",
         "responseExample":"Submitted Successfully!"
     },
     {
@@ -1089,7 +1467,7 @@
         "requestExample":{
             "homeworkID":9
         },
-        "responseDescription":"Receives 'Removed Successfully' if Everything Went Well",
+        "responseDescription":"Receives 'Removed Successfully' if EveryThing Went Well",
         "responseExample":"Removed Successfully"
     },
     {
@@ -1131,7 +1509,7 @@
                 }
             ]   
         },
-        "responseDescription":"Receives 'Submitted Successfully!' if Everything Went Well,or 'Not Found' if The Student ID Doesn't Exict",
+        "responseDescription":"Receives 'Submitted Successfully!' if EveryThing Went Well,or 'Not Found' if The Student ID Doesn't Exict",
         "responseExample":"Submitted Successfully!"
     },
     {
@@ -1155,7 +1533,7 @@
             "courseID":"1",
             "date":"2020-12-12 00:01:00"
         },
-        "responseDescription":"Receives 'unSubmitted Successfully!' if Everything Went Well",
+        "responseDescription":"Receives 'unSubmitted Successfully!' if EveryThing Went Well",
         "responseExample":"unSubmitted Successfully!"
     },
     {
