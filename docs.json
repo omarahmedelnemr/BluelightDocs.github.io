@@ -1357,18 +1357,34 @@
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
-
-    
+    {
+        "endpoint":"/teacher/studentsList",
+        "method":"Get",
+        "description":"The Endpoint Used to Get The List of Student in Specific Class",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"Take The ID of The Classroom"
+            }
+            
+        ],
+        "responseDescription":"Receives a list of Student in a Classroom",
+        "responseExample":[
+            {
+                "id": 8,
+                "name": "Omar",
+                "img_dir": "http",
+                "age": 14
+            },
+            {
+                "id": 9,
+                "name": "AHmed",
+                "img_dir": "http",
+                "age": 15
+            }
+        ]
+    },
     {
         "endpoint":"/Teacher/Homework",
         "method":"post",
@@ -1418,7 +1434,7 @@
         ],
         "requestExample":{
             "name":"sheet1",
-            "description":"solve it student asap",
+            "description":"Solve The Following Questions:",
             "grade":10,
             "publish_date":"2020-12-12 20:10:10",
             "due":"2020-12-22 20:10:10",
@@ -1449,27 +1465,203 @@
         
         
         },
-        "responseDescription":"Receives 'Submitted Successfully!' if EveryThing Went Well",
-        "responseExample":"Submitted Successfully!"
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
     },
     {
         "endpoint":"/Teacher/Homework",
         "method":"delete",
-        "description":"The Endpoint Used to Create New Homework and Assign it To Selected Classroom",
+        "description":"The Endpoint Used to Unsubmit or Remove The  Data For Specific Homework using it's ID",
         "parameters":[
             {
                 "paramName":"homeworkID",
                 "paramType":"String",
-                "paramDescription":"Assignment Name (Title)"
+                "paramDescription":"Take The ID of The Homework"
             }
             
         ],
         "requestExample":{
             "homeworkID":9
         },
-        "responseDescription":"Receives 'Removed Successfully' if EveryThing Went Well",
-        "responseExample":"Removed Successfully"
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
     },
+
+
+
+
+    {
+        "endpoint":"/Teacher/Exam",
+        "method":"post",
+        "description":"The Endpoint Used to Create New Exam and Assign it To Selected Classroom",
+        "parameters":[
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Assignment Name (Title)"
+            },
+            {
+                "paramName":"description",
+                "paramType":"String",
+                "paramDescription":"The description Of the Assignment (Default Null )"
+            },
+            {
+                "paramName":"grade",
+                "paramType":"Number",
+                "paramDescription":"The Grades for This Assignment"
+            },
+            {
+                "paramName":"publish_date",
+                "paramType":"Date",
+                "paramDescription":"Tells When The Assingment Was Published"
+            },
+            {
+                "paramName":"due",
+                "paramType":"array",
+                "paramDescription":"Tells When The Deadline for the Assingment Submission"
+            },
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"whitch Class Does The Assignment is Asssigned To"
+            },
+            {
+                "paramName":"courseID",
+                "paramType":"Number",
+                "paramDescription":"The Course ID of the Assingment Subject"
+            },
+            {
+                "paramName":"Questions",
+                "paramType":"Object",
+                "paramDescription":"The list of Questions Including the Options For Each Question"
+            }
+            
+        ],
+        "requestExample":{
+            "name":"sheet1",
+            "description":"Solve The Following Questions:",
+            "grade":10,
+            "publish_date":"2020-12-12 20:10:10",
+            "due":"2020-12-22 20:10:10",
+            "classroomID":"E3/2",
+            "courseID":1,
+            "Questions":[
+                {
+                    "type":"smcq",
+                    "QNumber":1,
+                    "questionText":"What is 3*3",
+                    "attachment":null,
+                    "options":[
+                        {
+                            "text":"9",
+                            "isRight":true
+                        },
+                        {
+                            "text":"6",
+                            "isRight":false
+                        },
+                        {
+                            "text":"1",
+                            "isRight":false
+                        }
+                    ]
+                }
+            ]
+        
+        
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Teacher/Exam",
+        "method":"delete",
+        "description":"The Endpoint Used to Unsubmit or Remove The  Data For Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"String",
+                "paramDescription":"Take The ID of The Exam"
+            }
+            
+        ],
+        "requestExample":{
+            "examID":9
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+
+    
+    {
+        "endpoint":"/Teacher/event",
+        "method":"POST",
+        "description":"The Endpoint Used to Add New Event By a Teacher",
+        "parameters":[
+            {
+                "paramName":"title",
+                "paramType":"string",
+                "paramDescription":"The Event Title like (Zoo Trip)"
+            },
+            {
+                "paramName":"description",
+                "paramType":"String",
+                "paramDescription":"The description of the Event, like (When, Where ...)"
+            },
+            {
+                "paramName":"publish_date",
+                "paramType":"Date",
+                "paramDescription":"The Date When The Event Was Published"
+            },
+            {
+                "paramName":"attachment",
+                "paramType":"String",
+                "paramDescription":"Take The Attachment URL if Exist"
+            },
+            {
+                "paramName":"teacherID",
+                "paramType":"number",
+                "paramDescription":"The ID of the Teacher Who Published The Event"
+            },
+            {
+                "paramName":"targetClassrooms",
+                "paramType":"Array",
+                "paramDescription":"The List of Classroom Targeted in This Event"
+            }
+        ],
+        "requestExample":{
+            "title":"testTitle",
+            "description":"TestDesc",
+            "publish_date":"2020-12-12 08:08:08",
+            "attachment":null,
+            "teacherID":1,
+            "targetClassrooms":["E3/2","E3/1"]
+        
+        },
+        "responseDescription":"Receives 'Done'",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Teacher/event",
+        "method":"delete",
+        "description":"The Endpoint Used to Delete an Event By a Teacher",
+        "parameters":[
+            {
+                "paramName":"eventID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The event"
+            }
+        ],
+        "requestExample":{
+            "eventID":3    
+        },
+        "responseDescription":"Receives 'Done'",
+        "responseExample":"Done"
+    },
+
+
+
+
     {
         "endpoint":"/Teacher/attendance",
         "method":"post",
@@ -1509,8 +1701,8 @@
                 }
             ]   
         },
-        "responseDescription":"Receives 'Submitted Successfully!' if EveryThing Went Well,or 'Not Found' if The Student ID Doesn't Exict",
-        "responseExample":"Submitted Successfully!"
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
     },
     {
         "endpoint":"/Teacher/attendance",
@@ -1533,47 +1725,7 @@
             "courseID":"1",
             "date":"2020-12-12 00:01:00"
         },
-        "responseDescription":"Receives 'unSubmitted Successfully!' if EveryThing Went Well",
-        "responseExample":"unSubmitted Successfully!"
-    },
-    {
-        "endpoint":"/Teacher/event",
-        "method":"POST",
-        "description":"The Endpoint Used to Add New Event By a Teacher",
-        "parameters":[
-            {
-                "paramName":"targetID",
-                "paramType":"number",
-                "paramDescription":"Take The ID of The Target (MenyToMeny JOin Table Entity ID)"
-            }
-        ],
-        "requestExample":{
-            "title":"testTitle",
-            "description":"TestDesc",
-            "publish_date":"2020-12-12 08:08:08",
-            "attachment":null,
-            "teacherID":1,
-            "targetClassrooms":["E3/2","E3/1"]
-        
-        },
-        "responseDescription":"Receives 'Done'",
-        "responseExample":"Done"
-    },
-    {
-        "endpoint":"/Teacher/event",
-        "method":"delete",
-        "description":"The Endpoint Used to Delete an Event By a Teacher",
-        "parameters":[
-            {
-                "paramName":"eventID",
-                "paramType":"number",
-                "paramDescription":"Take The ID of The event"
-            }
-        ],
-        "requestExample":{
-            "eventID":3    
-        },
-        "responseDescription":"Receives 'Done'",
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
     }
 
