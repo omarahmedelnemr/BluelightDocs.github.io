@@ -454,6 +454,9 @@ html.menu-opened .burger-menu-icon  .line3 {
 #welcome{
     padding: 50px 20px 0px;
 }
+.singleEndpoint{
+    padding-top: 1px;
+}
 @media (min-width: 950px) {
     .left-menu{
         width: 300px;
