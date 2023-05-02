@@ -457,6 +457,10 @@ html.menu-opened .burger-menu-icon  .line3 {
 .singleEndpoint{
     padding-top: 1px;
 }
+#content-common-responses div{
+    padding-left: 50px;
+}
+
 @media (min-width: 950px) {
     .left-menu{
         width: 300px;
