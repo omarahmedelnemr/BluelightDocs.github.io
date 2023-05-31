@@ -70,9 +70,10 @@ for(var i =0;i<jsonData.length;i++){
     htmlBuild+='</div><hr/>'
     // document.getElementById('studentEndpointsDetails').appendChild(htmlBuild)
     // document.getElementById('StudentEndpointsList').appendChild(ListhtmlBuild)
-
-    $("#EndpointsDetails").append(htmlBuild)
-    $("#EndpointsList").append(ListhtmlBuild)
+    const targetSection = item.endpoint.split('/')[1].toLowerCase()
+    console.log("#"+targetSection+"EndpointsDetails")
+    $("#"+targetSection+"EndpointsDetails").append(htmlBuild)
+    $("#"+targetSection+"EndpointsList").append(ListhtmlBuild)
 
 }
 $("#show_leftMenu_buttom").click(()=>{

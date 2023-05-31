@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/hightlightjs-dark.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="icon" href="images/test.svg">
+    <link rel="icon" href="images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
 <div class="left-menu">
     <div class="content-logo">
         <div class="logo">
-            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/test.svg" height="32" />
+            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
             <span>API Documentation</span>
         </div>
         <button class="burger-menu-icon" id="button-menu-mobile">
@@ -67,14 +67,14 @@
             <li class="scroll-to-link" data-target="content-admin">
                 <a>&emsp;&emsp;Admin</a>
             </li>
-            <!-- <li class="scroll-to-link" data-target="content-student">
+            <li class="scroll-to-link" data-target="content-student">
                 <a>&emsp;&emsp;Students</a>
             </li>
             <li class="scroll-to-link" data-target="content-teacher">
                 <a>&emsp;&emsp;Teachers</a>
             </li>
             <li class="scroll-to-link" data-target="content-parent">
-                <a>&emsp;&emsp;Parents</a> -->
+                <a>&emsp;&emsp;Parents</a>
             </li>
         </ul>
     </div>
@@ -88,19 +88,19 @@
                 <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
                 <span>API Documentation</span>
             </div>
-            <p>Welcome to OSKUN API Documentations</p>
+            <p>Welcome to Bluelight API Documentations</p>
         </div>
         <div class="overflow-hidden content-section" id="content-get-started">
             <h1>Get started</h1>
             <p>
-                This is the Backend API Documentation For <strong> OSKUN </strong>LMS Systems. 
+                This is the Backend API Documentation For <a href="https://bluelightlms.com" target="_blank"><strong> Bluelight </strong>LMS</a> Systems. 
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-how-to-use">
             <h2>How to Use</h2>
             <p>
                 To get Started, You Have To Have The Base URL For The API, For Example :<br>
-                <code class="higlighted break-word">http://api.bluelightlms.com/</code>
+                <code class="higlighted break-word">http://api.bluelight.com/</code>
             </p>
             <p>Then You Would Have to Follow The Instructions Below For How to Use Every Endpoint with A Correct Parameters</p>
             <!-- <br> -->
@@ -113,11 +113,19 @@
                 Every Endpoint when Triggerd, It Takes it's Parameteres and then Respooned With with the Desired Data or one of The Following Four Options:<br/>
                 <div>
                     <code class="higlighted">Done</code> With Status <code class="higlighted">200</code>:<br/> 
-                    <p class="responseDescription">When The Request is Supposed To Take an Action </p>
+                    <p class="responseDescription">When The Request is Supposed To Take an Action like Submitting Homework or adding a new Event Announcement, if  you Receive "Done" That Means Every Thing Went Well and The Action is Successfully Performed</p>
                 </div>
                 <div>
-                    <code class="higlighted">Somthing went Wrong</code> With Status <code class="higlighted">200</code>:<br/> 
-                    <p class="responseDescription">When Somthing Wrong Happend</p>
+                    <code class="higlighted">Missing Parameters</code> With Status <code class="higlighted">406</code>:<br/> 
+                    <p class="responseDescription">When The Request Require Some Parameters and they are not Given in the Request or may be misspelled, so make sure you add them and spill them right</p>
+                </div>
+                <div>
+                    <code class="higlighted">Not Found</code> With Status <code class="higlighted">404</code>:<br/> 
+                    <p class="responseDescription">When You Are Trying to Get Some Data That is Not Exist in Database, or The Parameters are having invalid Values</p>
+                </div>
+                <div>
+                    <code class="higlighted">Error While DB Request</code> With Status <code class="higlighted">406</code>:<br/> 
+                    <p class="responseDescription">When Something Happen After Initializing a Request To Database, in that case, you might Check the Parameters Data Types and Values, or How The Database Parameters are Named For Addressing</p>
                 </div>
 
             </p>
@@ -125,28 +133,72 @@
             <p>if you find Any Struggle with One of These Responses or there is another response Showed Up, Contact Me Immediately</p>
         </div>
         <div class="overflow-hidden content-section" id="content-branches">
-            <!-- <h2>Branches</h2>
+            <h2>Branches</h2>
             <p>
                 Branches is the Diffrent Kind of User The Can Interact With our System, Currently We Have Students, Teachers, and Parents.
-            </p> -->
-            <!-- <p>
+            </p>
+            <p>
                 Every Branch (or user Type ) Has it's Own Endpoint To Distinguish it From The Others,<br/>
                 &emsp;&emsp;Admin's Branch: <code class="higlighted">/admin</code> Endpoint<br/>
                 &emsp;&emsp;Students Branch: <code class="higlighted">/student</code> Endpoint<br/>
                 &emsp;&emsp;Teachers Branch: <code class="higlighted">/teacher</code> Endpoint<br/>
                 &emsp;&emsp;Parents Branch: <code class="higlighted">/parent</code> Endpoint<br/>
-            </p> -->
+            </p>
             <p>For Example, To Use URL for Getting All Homewrok Assinged To Student, The URL Will Be Like:<br/> <code class="higlighted">https://api.bluelight.com/student/getAllHomework</code></p>
         </div>
         <div class="overflow-hidden content-section" id="content-admin">
-            <h2>System</h2>
-
+            <h2>Admin</h2>
+            <p>
+                This Branch is Responsible For Admin Panal, Which Allow To Add/Remove Critical Data Like Classrooms, Teachers, Students
+            </p>
             <p>Here is All Endpoint That Can Be Used:</p>
                 <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
-            <div id="EndpointsList">
+            <div id="adminEndpointsList">
                 
             </div>
-            <div id="EndpointsDetails"> 
+            <div id="adminEndpointsDetails"> 
+
+            </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-student">
+                <h2>Students</h2>
+                <p>
+                    This Branch is Responsible For All Student Work: Submitting Assignments, Take Quizes and Exams, View Their Grades and Progress, Track Events and More
+                </p>
+                <p>Here is All Endpoint That Can Be Used:</p>
+                    <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
+                <div id="studentEndpointsList">
+                    
+                </div>
+                <div id="studentEndpointsDetails"> 
+
+                </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-teacher">
+            <h2>Teachers</h2>
+            <p>
+                This Branch is Responsible For All Teacher Work: Adding new Homework, Exams, Grading Exams, Submitting Attendace and More
+            </p>
+            <p>Here is All Endpoint That Can Be Used:</p>
+                <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
+            <div id="teacherEndpointsList">
+                
+            </div>
+            <div id="teacherEndpointsDetails"> 
+
+            </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-parent">
+            <h2>Parents</h2>
+            <p>
+                This Branch is Responsible For All Parnets Work: Tracking Homework, Exams, Submissions and More
+            </p>
+            <p>Here is All Endpoint That Can Be Used:</p>
+                <!-- <p><a class ="EndpointLink " href="#studentgetallhomework">&emsp;&emsp;&emsp;&emsp;<code class="higlighted">student/getallhomework</code></a></p> -->
+            <div id="parentEndpointsList">
+                
+            </div>
+            <div id="parentEndpointsDetails"> 
 
             </div>
         </div>
