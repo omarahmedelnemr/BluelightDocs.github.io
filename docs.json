@@ -1391,6 +1391,21 @@
         "description":"The Endpoint Used to Create New Homework and Assign it To Selected Classroom",
         "parameters":[
             {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"The ID of the Teacher Who Created the Homework"
+            },
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"which Class Does The Assignment is Asssigned To"
+            },
+            {
+                "paramName":"courseID",
+                "paramType":"Number",
+                "paramDescription":"The Course ID of the Assingment Subject"
+            },
+            {
                 "paramName":"name",
                 "paramType":"String",
                 "paramDescription":"Assignment Name (Title)"
@@ -1416,16 +1431,6 @@
                 "paramDescription":"Tells When The Deadline for the Assingment Submission"
             },
             {
-                "paramName":"classroomID",
-                "paramType":"String",
-                "paramDescription":"whitch Class Does The Assignment is Asssigned To"
-            },
-            {
-                "paramName":"courseID",
-                "paramType":"Number",
-                "paramDescription":"The Course ID of the Assingment Subject"
-            },
-            {
                 "paramName":"Questions",
                 "paramType":"Object",
                 "paramDescription":"The list of Questions Including the Options For Each Question"
@@ -1433,13 +1438,14 @@
             
         ],
         "requestExample":{
+            "teacherID":1,
+            "classroomID":"E3/2",
+            "courseID":1,
             "name":"sheet1",
             "description":"Solve The Following Questions:",
             "grade":10,
             "publish_date":"2020-12-12 20:10:10",
             "due":"2020-12-22 20:10:10",
-            "classroomID":"E3/2",
-            "courseID":1,
             "Questions":[
                 {
                     "type":"smcq",
@@ -1497,6 +1503,21 @@
         "description":"The Endpoint Used to Create New Exam and Assign it To Selected Classroom",
         "parameters":[
             {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"The ID of the Teacher Who Created the Exam"
+            },
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"which Class Does The Assignment is Asssigned To"
+            },
+            {
+                "paramName":"courseID",
+                "paramType":"Number",
+                "paramDescription":"The Course ID of the Assingment Subject"
+            },
+            {
                 "paramName":"name",
                 "paramType":"String",
                 "paramDescription":"Assignment Name (Title)"
@@ -1522,16 +1543,6 @@
                 "paramDescription":"Tells When The Deadline for the Assingment Submission"
             },
             {
-                "paramName":"classroomID",
-                "paramType":"String",
-                "paramDescription":"whitch Class Does The Assignment is Asssigned To"
-            },
-            {
-                "paramName":"courseID",
-                "paramType":"Number",
-                "paramDescription":"The Course ID of the Assingment Subject"
-            },
-            {
                 "paramName":"Questions",
                 "paramType":"Object",
                 "paramDescription":"The list of Questions Including the Options For Each Question"
@@ -1539,13 +1550,14 @@
             
         ],
         "requestExample":{
+            "teacherID":1,
+            "classroomID":"E3/2",
+            "courseID":1,
             "name":"sheet1",
             "description":"Solve The Following Questions:",
             "grade":10,
             "publish_date":"2020-12-12 20:10:10",
             "due":"2020-12-22 20:10:10",
-            "classroomID":"E3/2",
-            "courseID":1,
             "Questions":[
                 {
                     "type":"smcq",
@@ -1710,6 +1722,30 @@
         "endpoint":"/Teacher/attendance",
         "method":"DELETE",
         "description":"The Endpoint Used to Delete or Unsumbit Attendance Record",
+        "parameters":[
+            {
+                "paramName":"courseID",
+                "paramType":"String",
+                "paramDescription":"Take The ID of The Course"
+            },
+            {
+                "paramName":"date",
+                "paramType":"Date",
+                "paramDescription":"Take The Current Day"
+            }
+            
+        ],
+        "requestExample":{
+            "courseID":"1",
+            "date":"2020-12-12 00:01:00"
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Teacher/DirectMessage",
+        "method":"POST",
+        "description":"The Endpoint Used to Send a Direct Message or Note to The Student's Parent",
         "parameters":[
             {
                 "paramName":"courseID",
