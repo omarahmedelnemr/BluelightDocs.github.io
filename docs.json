@@ -1438,40 +1438,54 @@
             
         ],
         "requestExample":{
+            "classroomID": "E3/2",
+            "courseID": 1,
             "teacherID":1,
-            "classroomID":"E3/2",
-            "courseID":1,
-            "name":"sheet1",
-            "description":"Solve The Following Questions:",
-            "grade":10,
-            "publish_date":"2020-12-12 20:10:10",
-            "due":"2020-12-22 20:10:10",
-            "Questions":[
-                {
-                    "type":"smcq",
-                    "QNumber":1,
-                    "questionText":"What is 3*3",
-                    "attachment":null,
-                    "grade":5,
-                    "options":[
-                        {
-                            "text":"9",
-                            "isRight":true
-                        },
-                        {
-                            "text":"6",
-                            "isRight":false
-                        },
-                        {
-                            "text":"1",
-                            "isRight":false
-                        }
-                    ]
-                }
+            "name": "sheet1",
+            "description": "Solve The Following Questions:",
+            "grade": 10,
+            "publish_date": "2020-12-12 20:10:10",
+            "due": "2020-12-22 20:10:10",
+            "Questions": [
+               {
+                  "type": "smcq",
+                  "QNumber": 1,
+                  "questionText": "What is 3*3",
+                  "attachment": null,
+                  "grade": 5,
+                  "options": [
+                     {
+                        "text": "9",
+                        "isRight": true
+                     },
+                     {
+                        "text": "6",
+                        "isRight": false
+                     },
+                     {
+                        "text": "1",
+                        "isRight": false
+                     }
+                  ]
+               },
+               {
+                  "type": "written",
+                  "QNumber": 1,
+                  "questionText": "Write What You Know About Atmosphere",
+                  "attachment": null,
+                  "grade": 10,
+                  "options": []
+               },
+               {
+                  "type": "attachment",
+                  "QNumber": 1,
+                  "questionText": "upload You id Image",
+                  "attachment": null,
+                  "grade": 10,
+                  "options": []
+               }
             ]
-        
-        
-        },
+         },
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
     },
@@ -1550,40 +1564,54 @@
             
         ],
         "requestExample":{
+            "classroomID": "E3/2",
+            "courseID": 1,
             "teacherID":1,
-            "classroomID":"E3/2",
-            "courseID":1,
-            "name":"sheet1",
-            "description":"Solve The Following Questions:",
-            "grade":10,
-            "publish_date":"2020-12-12 20:10:10",
-            "due":"2020-12-22 20:10:10",
-            "Questions":[
-                {
-                    "type":"smcq",
-                    "QNumber":1,
-                    "questionText":"What is 3*3",
-                    "attachment":null,
-                    "grade":5,
-                    "options":[
-                        {
-                            "text":"9",
-                            "isRight":true
-                        },
-                        {
-                            "text":"6",
-                            "isRight":false
-                        },
-                        {
-                            "text":"1",
-                            "isRight":false
-                        }
-                    ]
-                }
+            "name": "sheet1",
+            "description": "Solve The Following Questions:",
+            "grade": 10,
+            "publish_date": "2020-12-12 20:10:10",
+            "due": "2020-12-22 20:10:10",
+            "Questions": [
+               {
+                  "type": "smcq",
+                  "QNumber": 1,
+                  "questionText": "What is 3*3",
+                  "attachment": null,
+                  "grade": 5,
+                  "options": [
+                     {
+                        "text": "9",
+                        "isRight": true
+                     },
+                     {
+                        "text": "6",
+                        "isRight": false
+                     },
+                     {
+                        "text": "1",
+                        "isRight": false
+                     }
+                  ]
+               },
+               {
+                  "type": "written",
+                  "QNumber": 1,
+                  "questionText": "Write What You Know About Atmosphere",
+                  "attachment": null,
+                  "grade": 10,
+                  "options": []
+               },
+               {
+                  "type": "attachment",
+                  "QNumber": 1,
+                  "questionText": "upload You id Image",
+                  "attachment": null,
+                  "grade": 10,
+                  "options": []
+               }
             ]
-        
-        
-        },
+         },
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
     },
