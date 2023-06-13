@@ -832,45 +832,50 @@
         "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
         "responseExample":[
             {
-                "id": 17,
+                "id": 25,
                 "type": "smcq",
                 "QNumber": 1,
+                "grade": 5,
                 "questionText": "What is 3*3",
                 "attachment": null,
-                "answers": {
-                    "id": 1,
-                    "answer": null,
-                    "attachment": null,
-                    "options": [
-                        {
-                            "checked": true,
-                            "option": {
-                                "id": 44,
-                                "isRight": true,
-                                "text": "9"
-                            }
-                        },
-                        {
-                            "checked": false,
-                            "option": {
-                                "id": 45,
-                                "isRight": false,
-                                "text": "6"
-                            }
-                        },
-                        {
-                            "checked": false,
-                            "option": {
-                                "id": 46,
-                                "isRight": false,
-                                "text": "1"
-                            }
-                        }
-                    ]
-                }
+                "options": [
+                    {
+                        "id": 56,
+                        "isRight": true,
+                        "text": "9",
+                        "Studentanswer": true
+                    },
+                    {
+                        "id": 57,
+                        "isRight": false,
+                        "text": "6",
+                        "Studentanswer": false
+                    },
+                    {
+                        "id": 58,
+                        "isRight": false,
+                        "text": "1",
+                        "Studentanswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "attachment": null
+            },
+            {
+                "id": 27,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "attachment": null
             }
         ]
-        
         
     },
     {
@@ -1137,42 +1142,48 @@
         "responseDescription":"Receives a list of all the Submitted Questions in That Exam,With Their answer",
         "responseExample":[
             {
-                "id": 17,
+                "id": 25,
                 "type": "smcq",
                 "QNumber": 1,
+                "grade": 5,
                 "questionText": "What is 3*3",
                 "attachment": null,
-                "answers": {
-                    "id": 1,
-                    "answer": null,
-                    "attachment": null,
-                    "options": [
-                        {
-                            "checked": true,
-                            "option": {
-                                "id": 44,
-                                "isRight": true,
-                                "text": "9"
-                            }
-                        },
-                        {
-                            "checked": false,
-                            "option": {
-                                "id": 45,
-                                "isRight": false,
-                                "text": "6"
-                            }
-                        },
-                        {
-                            "checked": false,
-                            "option": {
-                                "id": 46,
-                                "isRight": false,
-                                "text": "1"
-                            }
-                        }
-                    ]
-                }
+                "options": [
+                    {
+                        "id": 56,
+                        "isRight": true,
+                        "text": "9",
+                        "Studentanswer": true
+                    },
+                    {
+                        "id": 57,
+                        "isRight": false,
+                        "text": "6",
+                        "Studentanswer": false
+                    },
+                    {
+                        "id": 58,
+                        "isRight": false,
+                        "text": "1",
+                        "Studentanswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "attachment": null
+            },
+            {
+                "id": 27,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "attachment": null
             }
         ]
         
