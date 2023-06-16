@@ -64,6 +64,9 @@
             <li class="scroll-to-link" data-target="content-branches">
                 <a>Branches</a>
             </li>
+            <li class="scroll-to-link" data-target="content-general">
+                <a>&emsp;&emsp;General</a>
+            </li>
             <li class="scroll-to-link" data-target="content-admin">
                 <a>&emsp;&emsp;Admin</a>
             </li>
@@ -139,6 +142,7 @@
             </p>
             <p>
                 Every Branch (or user Type ) Has it's Own Endpoint To Distinguish it From The Others,<br/>
+                &emsp;&emsp;General Branch: <code class="higlighted">/</code> Endpoint<br/>
                 &emsp;&emsp;Admin's Branch: <code class="higlighted">/admin</code> Endpoint<br/>
                 &emsp;&emsp;Students Branch: <code class="higlighted">/student</code> Endpoint<br/>
                 &emsp;&emsp;Teachers Branch: <code class="higlighted">/teacher</code> Endpoint<br/>
@@ -146,6 +150,19 @@
             </p>
             <p>For Example, To Use URL for Getting All Homewrok Assinged To Student, The URL Will Be Like:<br/> <code class="higlighted">https://api.bluelight.com/student/getAllHomework</code></p>
         </div>
+        <div class="overflow-hidden content-section" id="content-general">
+            <h2>General</h2>
+            <p>
+                This Branch is Responsible For a General purpose Endpoint which is used using all the Users side, Student, Admin, Teacher, Parents like Login and Upload a File
+            </p>
+            <p>Here is All Endpoint That Can Be Used:</p>
+            <div id="generalEndpointsList">
+                
+            </div>
+            <div id="generalEndpointsDetails"> 
+
+            </div>
+        </div>  
         <div class="overflow-hidden content-section" id="content-admin">
             <h2>Admin</h2>
             <p>

@@ -71,10 +71,15 @@ for(var i =0;i<jsonData.length;i++){
     // document.getElementById('studentEndpointsDetails').appendChild(htmlBuild)
     // document.getElementById('StudentEndpointsList').appendChild(ListhtmlBuild)
     const targetSection = item.endpoint.split('/')[1].toLowerCase()
-    console.log("#"+targetSection+"EndpointsDetails")
-    $("#"+targetSection+"EndpointsDetails").append(htmlBuild)
-    $("#"+targetSection+"EndpointsList").append(ListhtmlBuild)
+    if (targetSection == 'teacher' || targetSection == "student" || targetSection == "admin" ||targetSection == "parent"){
 
+        const targetSection = item.endpoint.split('/')[1].toLowerCase()
+        $("#"+targetSection+"EndpointsDetails").append(htmlBuild)
+        $("#"+targetSection+"EndpointsList").append(ListhtmlBuild)
+    }else{
+        $("#generalEndpointsDetails").append(htmlBuild)
+        $("#generalEndpointsList").append(ListhtmlBuild)
+    }
 }
 $("#show_leftMenu_buttom").click(()=>{
     if ($(".left-menu").width() == 0){

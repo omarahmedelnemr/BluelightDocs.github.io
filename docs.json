@@ -1,5 +1,155 @@
 [
     {
+        "endpoint":"/",
+        "method":"GET",
+        "description":"display a simple HTML page says Welcome, i could be used to Check the Server is Running",
+
+        "responseDescription":"Simple HTML Page Says Hello"
+    },
+    {
+        "endpoint":"/login",
+        "method":"POST",
+        "description":"Login To The System, using your username and password, and Then The Server Will Route You to You Side weather you are a Student, Admin, Teacher, Parents.<br/>Every user is Given a Defualt username using his name, the user can change it later",
+        "parameters":[
+            {
+                "paramName":"username",
+                "paramType":"String",
+                "paramDescription":"The Username you use as Your Identifier"
+            },
+            {
+                "paramName":"password",
+                "paramType":"String",
+                "paramDescription":"user's Password, user can also change it later"
+            }
+            
+        ],
+        "requestExample":{
+            "username":"omar_ahmed",
+            "password":"testPassword"
+        },
+        "responseExample":{
+            "id": 8,
+            "name": "Omar",
+            "img_dir": "http",
+            "age": 14,
+            "classroom": "E3/1",
+            "role": "student"
+        },
+        "responseDescription":"Receives user Info to be saved in Local Storage and a jwt is sent as a cookie with the users Data OtherWise, Reacives user not Found or wrong password if the password is wrong"
+    },
+    {
+        "endpoint":"/editUsername",
+        "method":"POST",
+        "description":"used To Edit user's Username which is user to login",
+        "parameters":[
+            {
+                "paramName":"username",
+                "paramType":"String",
+                "paramDescription":"The Username you use as Your Identifier"
+            },
+            {
+                "paramName":"password",
+                "paramType":"String",
+                "paramDescription":"user's Password, user can also change it later"
+            },
+            {
+                "paramName":"newUsername",
+                "paramType":"String",
+                "paramDescription":"user's new Username the he Choosed"
+            }
+            
+        ],
+        "requestExample":{
+            "username":"omar_ahmed",
+            "password":"testPassword",
+            "newUsername":" erin_yeagar"
+        },
+
+
+        "responseDescription":"Receives Done if The Data is Correct, Otherwise Reacives user not Found or wrong password if the password is wrong or one of the Common Errors"
+    },
+    {
+        "endpoint":"/editPassword",
+        "method":"POST",
+        "description":"used To Edit user's Password which is user to login",
+        "parameters":[
+            {
+                "paramName":"username",
+                "paramType":"String",
+                "paramDescription":"The Username you use as Your Identifier"
+            },
+            {
+                "paramName":"password",
+                "paramType":"String",
+                "paramDescription":"user's Password, user can also change it later"
+            },
+            {
+                "paramName":"newPassword",
+                "paramType":"String",
+                "paramDescription":"user's new Password the he Choosed"
+            }
+            
+        ],
+        "requestExample":{
+            "username":"omar_ahmed",
+            "password":"testPassword",
+            "newPassword":"my password"
+        },
+
+
+        "responseDescription":"Receives Done if The Data is Correct, Otherwise Reacives user not Found or wrong password if the password is wrong or one of the Common Errors"
+    },
+    {
+        "endpoint":"/upload",
+        "method":"POST",
+        "description":"used To upload a File to The Files Server (Somthing like Database) the Supported File Types are [png,jpg,jpeg] for images, 'pdf' for files",
+        "parameters":[
+            {
+                "paramName":"file",
+                "paramType":"file",
+                "paramDescription":"The File to be Uploaded, (the Name of the Field is File no matter what the File name is, the Server will Generate a New One)"
+            }
+            
+        ],
+        "responseExample":"214124223.png",
+
+
+        "responseDescription":"Receives The name of the Uploaded File on the Server to Be Stored as String in Database , Otherwise Reacives 'No files were uploaded' if the field File is empty or 'File Type is Not Supported' is the uploaded File Type is Not Supported,  or one of the Common Errors"
+    },
+    {
+        "endpoint":"/uploadProfilePic",
+        "method":"POST",
+        "description":"used To upload a Profile Picture to The Files Server (Somthing like Database) the Supported File Types are [png,jpg,jpeg]",
+        "parameters":[
+            {
+                "paramName":"file",
+                "paramType":"file",
+                "paramDescription":"The Image to be Uploaded, (the Name of the Field is File no matter what the File name is, the Server will Generate a New One)"
+            }
+            
+        ],
+        "responseExample":"214124223.png",
+
+
+        "responseDescription":"Receives The name of the Uploaded Picture on the Server to Be Stored as String in Database , Otherwise Reacives 'No files were uploaded' if the field File is empty or 'File Type is Not Supported' is the uploaded File Type is Not Supported,  or one of the Common Errors"
+    },
+    {
+        "endpoint":"/file/(filename)",
+        "method":"get",
+        "description":"used To Get or Download a File from the Server, (filename) should be replaced with The Actual File Name Which is returned in upload Endpoint, somthing like 123456.png",
+        
+
+
+        "responseDescription":"Receives The image or a file that matchs the name provided"
+    },
+    {
+        "endpoint":"/profilePic/(filename)",
+        "method":"get",
+        "description":"used To Get or Download a Profile Picture from the Server, (filename) should be replaced with The Actual picture Name Which is returned in uploadProfilePic Endpoint, somthing like 123456.png",
+        
+        "responseDescription":"Receives The image that matchs the name provided"
+    },
+    {
         "endpoint":"/Admin/classroom",
         "method":"POST",
         "description":"Create New Classroom",
@@ -201,7 +351,7 @@
         "requestExample":{
             "studentID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
+            "img_dir":"https://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":13
         },
         "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
@@ -266,7 +416,7 @@
         "requestExample":{
             "schoolID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
+            "img_dir":"https://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":41,
             "role":"normal"
 
@@ -281,7 +431,7 @@
             {
                 "paramName":"teacherID",
                 "paramType":"Number",
-                "paramDescription":"The ID of The Student"
+                "paramDescription":"The ID of The Teacher"
             } 
         ],
         "requestExample":{
@@ -340,7 +490,7 @@
         "requestExample":{
             "teacherID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/images/2131xaas675546578.png",
+            "img_dir":"https://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":41
         },
         "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
@@ -371,10 +521,6 @@
         ],
         "responseDescription":"Receives a List of All Teachers in The School if Went Well, OtherWise, Reacives one of the Common Errors"
     },
-
-
-
-    
     {
         "endpoint":"/admin/allTeachers",
         "method":"Get",
@@ -401,6 +547,68 @@
         ],
         "responseDescription":"Receives a List of All Teachers in The School if Went Well, OtherWise, Reacives one of the Common Errors"
     },
+    {
+        "endpoint":"/admin/parent",
+        "method":"POST",
+        "description":"Add New Parent",
+        "parameters":[
+            {
+                "paramName":"schoolID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The School"
+            },
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"Desired Name For The Parent, Which Will Be Displayed in Parent's Pages"
+            },
+            {
+                "paramName":"img_dir",
+                "paramType":"String",
+                "paramDescription":"the Link of Teacher's Profile Picture (Could Be Null)"
+            },
+            {
+                "paramName":"age",
+                "paramType":"Number",
+                "paramDescription":"The Age of the Parent"
+            },
+            {
+                "paramName":"students",
+                "paramType":"List",
+                "paramDescription":"The List Providing The Students ID's That Parent is Responsoble For, might be one Students or two or eny Number"
+            }
+        ],
+        "requestExample":{
+            "schoolID":1,
+            "name":"Mohamed Elsaid Slama",
+            "img_dir":"https://api.bluelightlms.com/file/2131675546578.png",
+            "age":41,
+            "students":[1,2]
+
+        },
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
+        "endpoint":"/Admin/parent",
+        "method":"delete",
+        "description":"Remove a parent",
+        "parameters":[
+            {
+                "paramName":"parentID",
+                "paramType":"Number",
+                "paramDescription":"The ID of The parent"
+            } 
+        ],
+        "requestExample":{
+            "parentID":1
+        },
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+
+
+
+
+
 
 
 
@@ -464,6 +672,99 @@
         ]
     },
     {
+        "endpoint":"/parent/homeworkHeader",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Details like Homework Title, grades,   About Specific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives all the Data Related To That Homework",
+        "responseExample":{
+            "id": 54,
+            "submitted": true,
+            "grade": 15,
+            "graded": true,
+            "homework": {
+                "id": 29,
+                "name": "sheet1",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null
+            }
+        }   
+        
+    },
+    {
+        "endpoint":"/parent/SubmittedHomeworkQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Specific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
+        "responseExample":[
+            {
+                "id": 25,
+                "type": "smcq",
+                "QNumber": 1,
+                "grade": 5,
+                "questionText": "What is 3*3",
+                "attachment": null,
+                "options": [
+                    {
+                        "id": 56,
+                        "isRight": true,
+                        "text": "9",
+                        "Studentanswer": true
+                    },
+                    {
+                        "id": 57,
+                        "isRight": false,
+                        "text": "6",
+                        "Studentanswer": false
+                    },
+                    {
+                        "id": 58,
+                        "isRight": false,
+                        "text": "1",
+                        "Studentanswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "attachment": null
+            },
+            {
+                "id": 27,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "attachment": null
+            }
+        ]
+        
+    },
+    {
         "endpoint":"/Parent/assignedExamList",
         "method":"GET",
         "description":"get a List Of the Exams Assignemt to The Student Weather Submitted or Not",
@@ -504,6 +805,153 @@
             }
         ]
     },
+    {
+        "endpoint":"/parent/examHeader",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Details like Exam Title, grades,   About Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+        ],
+        "responseDescription":"Receives all the Data Related To That Exam",
+        "responseExample":{
+            "id": 54,
+            "submitted": true,
+            "grade": 15,
+            "graded": true,
+            "exam": {
+                "id": 29,
+                "name": "sheet1",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null
+            }
+        }   
+        
+    },
+    {
+        "endpoint":"/parent/SubmittedExamQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Submitted Questions in That Exam ,With Their answer",
+        "responseExample":[
+            {
+                "id": 25,
+                "type": "smcq",
+                "QNumber": 1,
+                "grade": 5,
+                "questionText": "What is 3*3",
+                "attachment": null,
+                "options": [
+                    {
+                        "id": 56,
+                        "isRight": true,
+                        "text": "9",
+                        "Studentanswer": true
+                    },
+                    {
+                        "id": 57,
+                        "isRight": false,
+                        "text": "6",
+                        "Studentanswer": false
+                    },
+                    {
+                        "id": 58,
+                        "isRight": false,
+                        "text": "1",
+                        "Studentanswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "attachment": null
+            },
+            {
+                "id": 27,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "attachment": null
+            }
+        ]
+        
+    },
+    {
+        "endpoint":"/parent/messagesList",
+        "method":"GET",
+        "description":"The Endpoint Used to get All Messages List Sent to a Parent from a Teahcer using Parent ID",
+        "parameters":[
+
+            {
+                "paramName":"parentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Parent"
+            }
+        ],
+        "responseDescription":"Receives The List of Messages List Sent with only title and date, message Body is not Sent",
+        "responseExample":[
+            {
+                "id": 3,
+                "title": "Welcome",
+                "sendDate": "2023-06-09T22:38:23.000Z",
+                "seen": true
+            }
+        ]
+    },
+    {
+        "endpoint":"/parent/message",
+        "method":"GET",
+        "description":"The Endpoint Used to get a Message Data (the Title, Body Text and Send Date) ",
+        "parameters":[
+
+            {
+                "paramName":"messageID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Message"
+            }
+        ],
+        "responseDescription":"Receives The all Message Data Including Body Text",
+        "responseExample":{
+            "id": 3,
+            "title": "Welcome",
+            "bodyText": "Welcome Here  Sir, Your SOn is KInda Playable",
+            "sendDate": "2023-06-09T22:38:23.000Z",
+            "seen": true
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
 
     
     {
@@ -606,20 +1054,19 @@
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
         "responseExample":{
-                "id": 1,
-                "submitted": false,
-                "grade": null,
-                "homework": {
-                    "id": 1,
-                    "name": "Sheet 1",
-                    "description": "Solve The Following Questions:",
-                    "grade": 10,
-                    "publish_date": "2023-02-19T18:42:18.000Z",
-                    "due_date": "2023-02-19T18:42:18.000Z"
-                }
+            "id": 54,
+            "submitted": true,
+            "grade": 15,
+            "graded": true,
+            "homework": {
+                "id": 29,
+                "name": "sheet1",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null
             }
-        
-        
+        }   
         
     },
     {
@@ -801,21 +1248,6 @@
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
         "endpoint":"/student/ExamsList",
         "method":"GET",
@@ -1222,6 +1654,63 @@
         ]
     },
     {
+        "endpoint":"/student/timetable",
+        "method":"Get",
+        "description":"The Endpoint Used to Student's Time Table ",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Classroom"
+            }
+            
+        ],
+        "responseDescription":"Receives a list showing Student's Time Table",
+        "responseExample":[
+            {
+                "id": 1,
+                "day": "Tuesday",
+                "hour": "9:30",
+                "course": {
+                    "id": 1,
+                    "name": "Math",
+                    "score": 100
+                }
+            },
+            {
+                "id": 2,
+                "day": "Tuesday",
+                "hour": "11:00",
+                "course": {
+                    "id": 2,
+                    "name": "Physics",
+                    "score": 200
+                }
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
         "endpoint":"/teacher/studentsList",
         "method":"Get",
         "description":"The Endpoint Used to Get The List of Student in Specific Class",
@@ -1371,7 +1860,239 @@
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
     },
+    {
+        "endpoint":"/Teacher/NotgradedHomeworkCount",
+        "method":"Get",
+        "description":"The Endpoint Used to get The Count of The Submissions That Needs To Be Graded",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Teacher"
+            }
+            
+        ],
+        "requestExample":{
+            "teacherID":1
+        },
+        "responseDescription":"Receives a Number of The Not Graded Submissions, or one of The Common Errors",
+        "responseExample":10
+    },
+    {
+        "endpoint":"/Teacher/HomeworkList",
+        "method":"Get",
+        "description":"The Endpoint Used to get List of all Homeworks That The Teacher Posted With how many Submission Need to Be Graded in Each",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Teacher"
+            }
+            
+        ],
+        "requestExample":{
+            "teacherID":1
+        },
+        "responseDescription":"Receives a List of Homeworks That The Teacher Posted With how many Submission Need to Be Graded in Each",
+        "responseExample":[
+            {
+                "id": 19,
+                "name": "sheet1",
+                "description": "solve it student asap",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "NotGraded": 0
+            },
+            {
+                "id": 21,
+                "name": "sheet2",
+                "description": "solve it student asap",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "NotGraded": 1
+            },
+            {
+                "id": 29,
+                "name": "sheet1",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "NotGraded": 0
+            }
+        ]
+    },
+    {
+        "endpoint":"/Teacher/HomeworkSubmissionList",
+        "method":"Get",
+        "description":"The Endpoint Used to get List of all Submission in a Spicific Homework",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Homework"
+            }
+            
+        ],
+        "requestExample":{
+            "homeworkID":1
+        },
+        "responseDescription":"Receives a List of Homework Submission (list of Students) That The Teacher Need to Be Grade",
+        "responseExample":[
+            {
+                "id": 24,
+                "submitted": true,
+                "grade": null,
+                "graded": false,
+                "student": {
+                    "id": 8,
+                    "name": "Omar",
+                    "img_dir": "http",
+                    "age": 14
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/Teacher/gradeHomework",
+        "method":"POST",
+        "description":"The Endpoint Used to get List of all Submission in a Spicific Homework",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Homework"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"questions",
+                "paramType":"Object",
+                "paramDescription":"Take an Object of Each Question ID and Its Grade"
+            }
+            
+        ],
+        "requestExample":{
+            "studentID": 8,
+            "homeworkID": 29,
+            "questions":[
+                {
+                    "questionID":54,
+                    "grade":5
+                },
+                {
+                    "questionID":54,
+                    "grade":5
+                },
+                {
+                    "questionID":54,
+                    "grade":5
+                }
+                
+            ]
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
 
+    {
+        "endpoint":"/teacher/homeworkHeader",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Details like Homework Title, grades,   About Specific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives all the Data Related To That Homework",
+        "responseExample":{
+            "id": 54,
+            "submitted": true,
+            "grade": 15,
+            "graded": true,
+            "homework": {
+                "id": 29,
+                "name": "sheet1",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null
+            }
+        }   
+        
+    },
+    {
+        "endpoint":"/teacher/SubmittedHomeworkQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Specific Homework using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"homeworkID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Homework"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
+        "responseExample":[
+            {
+                "id": 25,
+                "type": "smcq",
+                "QNumber": 1,
+                "grade": 5,
+                "questionText": "What is 3*3",
+                "attachment": null,
+                "options": [
+                    {
+                        "id": 56,
+                        "isRight": true,
+                        "text": "9",
+                        "Studentanswer": true
+                    },
+                    {
+                        "id": 57,
+                        "isRight": false,
+                        "text": "6",
+                        "Studentanswer": false
+                    },
+                    {
+                        "id": 58,
+                        "isRight": false,
+                        "text": "1",
+                        "Studentanswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "attachment": null
+            },
+            {
+                "id": 27,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "attachment": null
+            }
+        ]
+        
+    },
 
 
 
@@ -1497,6 +2218,244 @@
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
     },
+
+    {
+        "endpoint":"/Teacher/NotgradedExamCount",
+        "method":"Get",
+        "description":"The Endpoint Used to get The Count of The Submissions That Needs To Be Graded",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Teacher"
+            }
+            
+        ],
+        "requestExample":{
+            "teacherID":1
+        },
+        "responseDescription":"Receives a Number of The Not Graded Submissions, or one of The Common Errors",
+        "responseExample":10
+    },
+    {
+        "endpoint":"/Teacher/examList",
+        "method":"Get",
+        "description":"The Endpoint Used to get List of all Exams That The Teacher Posted With how many Submission Need to Be Graded in Each",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Teacher"
+            }
+            
+        ],
+        "requestExample":{
+            "teacherID":1
+        },
+        "responseDescription":"Receives a List of Exams That The Teacher Posted With how many Submission Need to Be Graded in Each",
+        "responseExample":[
+            {
+                "id": 19,
+                "name": "Quiz 1",
+                "description": "solve it student asap",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "NotGraded": 0
+            },
+            {
+                "id": 21,
+                "name": "Quiz 2",
+                "description": "solve it student asap",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "NotGraded": 1
+            },
+            {
+                "id": 29,
+                "name": "Quiz 3",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "NotGraded": 0
+            }
+        ]
+    },
+    {
+        "endpoint":"/Teacher/ExamSubmissionList",
+        "method":"Get",
+        "description":"The Endpoint Used to get List of all Submission in a Spicific Exam",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Exam"
+            }
+            
+        ],
+        "requestExample":{
+            "examID":1
+        },
+        "responseDescription":"Receives a List of Exam Submission (list of Students) That The Teacher Need to Be Grade",
+        "responseExample":[
+            {
+                "id": 24,
+                "submitted": true,
+                "grade": null,
+                "graded": false,
+                "student": {
+                    "id": 8,
+                    "name": "Omar",
+                    "img_dir": "http",
+                    "age": 14
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/Teacher/gradeExam",
+        "method":"POST",
+        "description":"The Endpoint Used to get List of all Submission in a Spicific Exam",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Exam"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"questions",
+                "paramType":"Object",
+                "paramDescription":"Take an Object of Each Question ID and Its Grade"
+            }
+            
+        ],
+        "requestExample":{
+            "studentID": 8,
+            "examID": 29,
+            "questions":[
+                {
+                    "questionID":54,
+                    "grade":5
+                },
+                {
+                    "questionID":54,
+                    "grade":5
+                },
+                {
+                    "questionID":54,
+                    "grade":5
+                }
+                
+            ]
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+
+
+    {
+        "endpoint":"/teacher/examHeader",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All Details like Exam Title, grades,   About Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+        ],
+        "responseDescription":"Receives all the Data Related To That Exam",
+        "responseExample":{
+            "id": 54,
+            "submitted": true,
+            "grade": 15,
+            "graded": true,
+            "exam": {
+                "id": 29,
+                "name": "Quiz 1",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null
+            }
+        }   
+        
+    },
+    {
+        "endpoint":"/teacher/SubmittedExamQuestions",
+        "method":"GET",
+        "description":"The Endpoint Used to Get only Submitted Questions with it's answers in a Specific Exam using it's ID",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"examID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Exam"
+            }
+        ],
+        "responseDescription":"Receives a list of all the Submitted Questions in That Exam, With Their answer",
+        "responseExample":[
+            {
+                "id": 25,
+                "type": "smcq",
+                "QNumber": 1,
+                "grade": 5,
+                "questionText": "What is 3*3",
+                "attachment": null,
+                "options": [
+                    {
+                        "id": 56,
+                        "isRight": true,
+                        "text": "9",
+                        "Studentanswer": true
+                    },
+                    {
+                        "id": 57,
+                        "isRight": false,
+                        "text": "6",
+                        "Studentanswer": false
+                    },
+                    {
+                        "id": 58,
+                        "isRight": false,
+                        "text": "1",
+                        "Studentanswer": false
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "attachment": null
+            },
+            {
+                "id": 27,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "attachment": null
+            }
+        ]
+        
+    },
+
+
+
 
     
     {
@@ -1640,23 +2599,84 @@
         "description":"The Endpoint Used to Send a Direct Message or Note to The Student's Parent",
         "parameters":[
             {
-                "paramName":"courseID",
-                "paramType":"String",
+                "paramName":"teacherID",
+                "paramType":"Number",
                 "paramDescription":"Take The ID of The Course"
             },
             {
-                "paramName":"date",
-                "paramType":"Date",
-                "paramDescription":"Take The Current Day"
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student To Target His/Her Parents"
+            },
+            {
+                "paramName":"title",
+                "paramType":"String",
+                "paramDescription":"Take The Title of The Message"
+            },
+            {
+                "paramName":"bodyText",
+                "paramType":"String",
+                "paramDescription":"Take The Main Text of the Message"
             }
             
         ],
         "requestExample":{
-            "courseID":"1",
-            "date":"2020-12-12 00:01:00"
+            "teacherID":1,
+            "studentID":23,
+            "title":"Update of Omar Progress",
+            "bodyText":"Omar has Been Doing Great in the last Few Week and i wanted to Thank You For That"
         },
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
         "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Teacher/DirectMessage",
+        "method":"DELETE",
+        "description":"The Endpoint Used to Delete a Message",
+        "parameters":[
+            {
+                "paramName":"messageID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Message"
+            }
+        ],
+        "requestExample":{
+            "messageID":1
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+    {
+        "endpoint":"/Teacher/DirectMessageList",
+        "method":"Get",
+        "description":"The Endpoint Used to Get all The Messgaes that a Teacher Send",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Course"
+            }
+            
+        ],
+        "requestExample":{
+            "teacherID":1
+        },
+        "responseDescription":"Receives a List of all Sent Messages, or one of The Common Errors",
+        "responseExample":[
+            {
+                "id": 3,
+                "title": "Welcome",
+                "bodyText": "Welcome Here  Sir, Your SOn is KInda Playable",
+                "sendDate": "2023-06-09T22:38:23.000Z",
+                "seen": true
+            },
+            {
+                "id": 4,
+                "title": "Update of Omar Progress",
+                "bodyText": "Omar has Been Doing Great in the last Few Week and i wanted to Thank You For That",
+                "sendDate": "2023-06-09T22:38:23.000Z",
+                "seen": false
+            }
+        ]
     }
-
 ]
