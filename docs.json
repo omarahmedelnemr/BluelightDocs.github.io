@@ -176,7 +176,13 @@
             "logo":"https://newImage",
             "studentsNum":130
         },
-        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseExample":{
+            "name": "private School",
+            "logo": "https://newImage",
+            "number_of_students": 130,
+            "id": 3
+        },
+        "responseDescription":"Receives School Data, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/classroom",
@@ -205,7 +211,7 @@
             "classroomID":"E3/2",
             "name":"3/2"
         },
-        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives Classroom Data, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/classroom",
@@ -255,7 +261,7 @@
             "name":"Math",
             "score":100
         },
-        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives Course Data, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/course",
@@ -311,7 +317,7 @@
             "age":15,
             "classroom":"E3/2"
         },
-        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives Student Data, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/student",
@@ -450,7 +456,7 @@
             "role":"normal"
 
         },
-        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives Teacher Data, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/teacher",
@@ -615,7 +621,7 @@
             "students":[1,2]
 
         },
-        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+        "responseDescription":"Receives Parent Data, OtherWise, Reacives one of the Common Errors"
     },
     {
         "endpoint":"/Admin/parent",
