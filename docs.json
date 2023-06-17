@@ -150,6 +150,35 @@
         "responseDescription":"Receives The image that matchs the name provided"
     },
     {
+        "endpoint":"/Admin/school",
+        "method":"POST",
+        "description":"Create New School",
+        "parameters":[
+            {
+                "paramName":"name",
+                "paramType":"String",
+                "paramDescription":"the Name of the School"
+            },
+            {
+                "paramName":"logo",
+                "paramType":"String",
+                "paramDescription":"the Image Directory or Link in the Server"
+            },
+            {
+                "paramName":"studentsNum",
+                "paramType":"Number",
+                "paramDescription":"The Number of the Students will Be in the School"
+            }
+            
+        ],
+        "requestExample":{
+            "name":"private School",
+            "logo":"https://newImage",
+            "studentsNum":130
+        },
+        "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
+    },
+    {
         "endpoint":"/Admin/classroom",
         "method":"POST",
         "description":"Create New Classroom",
