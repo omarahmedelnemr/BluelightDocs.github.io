@@ -443,6 +443,11 @@
                 "paramDescription":"The Age of the Teacher"
             },
             {
+                "paramName":"subject",
+                "paramType":"String",
+                "paramDescription":"The Subject that The Teacher Teaching"
+            },
+            {
                 "paramName":"role",
                 "paramType":"String",
                 "paramDescription":"The Role of the Teacher in School (Responsible For Subject, Normal,other Roles)"
