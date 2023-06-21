@@ -1790,9 +1790,9 @@
                 "paramDescription":"The ID of the Teacher Who Created the Homework"
             },
             {
-                "paramName":"classroomID",
-                "paramType":"String",
-                "paramDescription":"which Class Does The Assignment is Asssigned To"
+                "paramName":"classroomsID",
+                "paramType":"List",
+                "paramDescription":"which Classes Does The Assignment or Homework is Asssigned To"
             },
             {
                 "paramName":"courseID",
@@ -1832,7 +1832,7 @@
             
         ],
         "requestExample":{
-            "classroomID": "E3/2",
+            "classroomID": ["E3/1","E3/2"],
             "courseID": 1,
             "teacherID":1,
             "name": "sheet1",
