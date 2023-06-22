@@ -789,7 +789,7 @@
             {
                 "id": 5,
                 "type": "written",
-                "QNumber": 1,
+                "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
                 "attachment": null,
@@ -798,7 +798,7 @@
             {
                 "id": 6,
                 "type": "attachment",
-                "QNumber": 1,
+                "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
@@ -925,7 +925,7 @@
             {
                 "id": 5,
                 "type": "written",
-                "QNumber": 1,
+                "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
                 "attachment": null,
@@ -934,7 +934,7 @@
             {
                 "id": 6,
                 "type": "attachment",
-                "QNumber": 1,
+                "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
@@ -1125,36 +1125,53 @@
             }
         ],
         "responseDescription":"Receives a list of all the Questions in That Homework,<br/>the Received Parameter 'Type' Might Have Meny Value as Follows:<br/> <code classname='higlighted'>'smcq'</code> Means Single Choise MCQ Questions,<br/> <code classname='higlighted'>'mmcq'</code> Means Multiple Choise MCQ Question<br/> <code classname='higlighted'>'written'</code> Means Written Question,<br/> <code classname='higlighted'>'attach'</code> Mean Question Need Attachment ",
-        "responseExample":{
-            "questions": [
-                {
-                    "id": 17,
-                    "type": "smcq",
-                    "QNumber": 1,
-                    "questionText": "What is 3*3",
-                    "attachment": null
-                }
-            ],
-            "options": [
-                [
+        "responseExample":[
+            {
+                "id": 4,
+                "type": "smcq",
+                "QNumber": 1,
+                "grade": 5,
+                "questionText": "What is 3*3",
+                "options": [
                     {
-                        "id": 44,
+                        "id": 4,
                         "isRight": true,
                         "text": "9"
                     },
                     {
-                        "id": 45,
+                        "id": 5,
                         "isRight": false,
                         "text": "6"
                     },
                     {
-                        "id": 46,
+                        "id": 6,
                         "isRight": false,
                         "text": "1"
                     }
+                ],
+                "attachments": []
+            },
+            {
+                "id": 5,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "options": [],
+                "attachments": []
+            },
+            {
+                "id": 6,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "options": [],
+                "attachments": [
+                    "12.png"
                 ]
-            ]
-        }
+            }
+        ]
         
     },
     {
@@ -1206,7 +1223,7 @@
             {
                 "id": 5,
                 "type": "written",
-                "QNumber": 1,
+                "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
                 "attachment": null,
@@ -1215,7 +1232,7 @@
             {
                 "id": 6,
                 "type": "attachment",
-                "QNumber": 1,
+                "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
@@ -1434,36 +1451,53 @@
             }
         ],
         "responseDescription":"Receives a list of all the Questions in That Exam,<br/>the Received Parameter 'Type' Might Have Meny Value as Follows:<br/> <code classname='higlighted'>'smcq'</code> Means Single Choise MCQ Questions,<br/> <code classname='higlighted'>'mmcq'</code> Means Multiple Choise MCQ Question<br/> <code classname='higlighted'>'written'</code> Means Written Question,<br/> <code classname='higlighted'>'attach'</code> Mean Question Need Attachment ",
-        "responseExample":{
-            "questions": [
-                {
-                    "id": 17,
-                    "type": "smcq",
-                    "QNumber": 1,
-                    "questionText": "What is 3*3",
-                    "attachment": null
-                }
-            ],
-            "options": [
-                [
+        "responseExample":[
+            {
+                "id": 4,
+                "type": "smcq",
+                "QNumber": 1,
+                "grade": 5,
+                "questionText": "What is 3*3",
+                "options": [
                     {
-                        "id": 44,
+                        "id": 4,
                         "isRight": true,
                         "text": "9"
                     },
                     {
-                        "id": 45,
+                        "id": 5,
                         "isRight": false,
                         "text": "6"
                     },
                     {
-                        "id": 46,
+                        "id": 6,
                         "isRight": false,
                         "text": "1"
                     }
+                ],
+                "attachments": []
+            },
+            {
+                "id": 5,
+                "type": "written",
+                "QNumber": 2,
+                "grade": 10,
+                "questionText": "Write What You Know About Atmosphere",
+                "options": [],
+                "attachments": []
+            },
+            {
+                "id": 6,
+                "type": "attachment",
+                "QNumber": 3,
+                "grade": 10,
+                "questionText": "upload You id Image",
+                "options": [],
+                "attachments": [
+                    "12.png"
                 ]
-            ]
-        }
+            }
+        ]
         
     },
     {
@@ -1893,7 +1927,7 @@
                },
                {
                   "type": "written",
-                  "QNumber": 1,
+                  "QNumber": 2,
                   "questionText": "Write What You Know About Atmosphere",
                   "attachments": null,
                   "grade": 10,
@@ -1901,7 +1935,7 @@
                },
                {
                   "type": "attachment",
-                  "QNumber": 1,
+                  "QNumber": 3,
                   "questionText": "Look at these Two PDFs and Solve the Questions inside it",
                   "attachments": ["1234.pdf","4566.pdf"],
                   "grade": 10,
@@ -2147,7 +2181,7 @@
             {
                 "id": 5,
                 "type": "written",
-                "QNumber": 1,
+                "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
                 "attachment": null,
@@ -2156,7 +2190,7 @@
             {
                 "id": 6,
                 "type": "attachment",
-                "QNumber": 1,
+                "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
@@ -2252,7 +2286,7 @@
                },
                {
                   "type": "written",
-                  "QNumber": 1,
+                  "QNumber": 2,
                   "questionText": "Write What You Know About Atmosphere",
                   "attachments": null,
                   "grade": 10,
@@ -2260,7 +2294,7 @@
                },
                {
                   "type": "attachment",
-                  "QNumber": 1,
+                  "QNumber": 3,
                   "questionText": "Look at these Two PDFs and Solve the Questions inside it",
                   "attachments": ["1234.pdf","4566.pdf"],
                   "grade": 10,
@@ -2508,7 +2542,7 @@
             {
                 "id": 5,
                 "type": "written",
-                "QNumber": 1,
+                "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
                 "attachment": null,
@@ -2517,7 +2551,7 @@
             {
                 "id": 6,
                 "type": "attachment",
-                "QNumber": 1,
+                "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
