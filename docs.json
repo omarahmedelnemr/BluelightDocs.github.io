@@ -1237,7 +1237,7 @@
             {
                 "paramName":"answers",
                 "paramType":"Object",
-                "paramDescription":"Take The List Of Answers"
+                "paramDescription":"Take The List Of Answers as the Example"
             }
             
         ],
@@ -1248,7 +1248,7 @@
                 {
                     "id": 1,
                     "answer": "",
-                    "attachment": null,
+                    "attachments": null,
                     "options": [
                         {
                             "id": 2,
@@ -1259,6 +1259,18 @@
                             "checked": false
                         }
                     ]
+                },
+                {
+                    "id": 2,
+                    "answer": "",
+                    "attachments": ["1234.pdf","4566.pdf"],
+                    "options": null
+                },
+                {
+                    "id": 3,
+                    "answer": "This is my Written answer",
+                    "attachments": null,
+                    "options": null
                 }
             ]
         },
@@ -1533,7 +1545,7 @@
             {
                 "paramName":"answers",
                 "paramType":"Object",
-                "paramDescription":"Take The List Of Answers"
+                "paramDescription":"Take The List Of Answers as the Example"
             }
             
         ],
@@ -1544,7 +1556,7 @@
                 {
                     "id": 1,
                     "answer": "",
-                    "attachment": null,
+                    "attachments": null,
                     "options": [
                         {
                             "id": 2,
@@ -1555,6 +1567,18 @@
                             "checked": false
                         }
                     ]
+                },
+                {
+                    "id": 2,
+                    "answer": "",
+                    "attachments": ["1234.pdf","4566.pdf"],
+                    "options": null
+                },
+                {
+                    "id": 3,
+                    "answer": "This is my Written answer",
+                    "attachments": null,
+                    "options": null
                 }
             ]
         },
@@ -1845,7 +1869,7 @@
                   "type": "smcq",
                   "QNumber": 1,
                   "questionText": "What is 3*3",
-                  "attachment": null,
+                  "attachments": null,
                   "grade": 5,
                   "options": [
                      {
@@ -1866,17 +1890,17 @@
                   "type": "written",
                   "QNumber": 1,
                   "questionText": "Write What You Know About Atmosphere",
-                  "attachment": null,
+                  "attachments": null,
                   "grade": 10,
-                  "options": []
+                  "options": null
                },
                {
                   "type": "attachment",
                   "QNumber": 1,
-                  "questionText": "upload You id Image",
-                  "attachment": null,
+                  "questionText": "Look at these Two PDFs and Solve the Questions inside it",
+                  "attachments": ["1234.pdf","4566.pdf"],
                   "grade": 10,
-                  "options": []
+                  "options": null
                }
             ]
          },
@@ -2203,7 +2227,7 @@
                   "type": "smcq",
                   "QNumber": 1,
                   "questionText": "What is 3*3",
-                  "attachment": null,
+                  "attachments": null,
                   "grade": 5,
                   "options": [
                      {
@@ -2224,15 +2248,15 @@
                   "type": "written",
                   "QNumber": 1,
                   "questionText": "Write What You Know About Atmosphere",
-                  "attachment": null,
+                  "attachments": null,
                   "grade": 10,
                   "options": []
                },
                {
                   "type": "attachment",
                   "QNumber": 1,
-                  "questionText": "upload You id Image",
-                  "attachment": null,
+                  "questionText": "Look at these Two PDFs and Solve the Questions inside it",
+                  "attachments": ["1234.pdf","4566.pdf"],
                   "grade": 10,
                   "options": []
                }
