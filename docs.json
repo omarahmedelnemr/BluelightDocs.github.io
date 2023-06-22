@@ -759,7 +759,7 @@
         "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
         "responseExample":[
             {
-                "id": 25,
+                "id": 4,
                 "type": "smcq",
                 "QNumber": 1,
                 "grade": 5,
@@ -767,19 +767,19 @@
                 "attachment": null,
                 "options": [
                     {
-                        "id": 56,
+                        "id": 4,
                         "isRight": true,
                         "text": "9",
                         "Studentanswer": true
                     },
                     {
-                        "id": 57,
+                        "id": 5,
                         "isRight": false,
                         "text": "6",
                         "Studentanswer": false
                     },
                     {
-                        "id": 58,
+                        "id": 6,
                         "isRight": false,
                         "text": "1",
                         "Studentanswer": false
@@ -787,20 +787,22 @@
                 ]
             },
             {
-                "id": 26,
+                "id": 5,
                 "type": "written",
-                "QNumber": 2,
+                "QNumber": 1,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null
+                "attachment": null,
+                "Studentanswer": "it is a layer around the Earth "
             },
             {
-                "id": 27,
+                "id": 6,
                 "type": "attachment",
-                "QNumber": 3,
+                "QNumber": 1,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null
+                "attachment": null,
+                "Studentanswer": "default.png"
             }
         ]
         
@@ -1173,7 +1175,7 @@
         "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
         "responseExample":[
             {
-                "id": 25,
+                "id": 4,
                 "type": "smcq",
                 "QNumber": 1,
                 "grade": 5,
@@ -1181,19 +1183,19 @@
                 "attachment": null,
                 "options": [
                     {
-                        "id": 56,
+                        "id": 4,
                         "isRight": true,
                         "text": "9",
                         "Studentanswer": true
                     },
                     {
-                        "id": 57,
+                        "id": 5,
                         "isRight": false,
                         "text": "6",
                         "Studentanswer": false
                     },
                     {
-                        "id": 58,
+                        "id": 6,
                         "isRight": false,
                         "text": "1",
                         "Studentanswer": false
@@ -1201,20 +1203,22 @@
                 ]
             },
             {
-                "id": 26,
+                "id": 5,
                 "type": "written",
-                "QNumber": 2,
+                "QNumber": 1,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null
+                "attachment": null,
+                "Studentanswer": "it is a layer around the Earth "
             },
             {
-                "id": 27,
+                "id": 6,
                 "type": "attachment",
-                "QNumber": 3,
+                "QNumber": 1,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null
+                "attachment": null,
+                "Studentanswer": "default.png"
             }
         ]
         
@@ -2112,7 +2116,7 @@
         "responseDescription":"Receives a list of all the Submitted Questions in That Homework,With Their answer",
         "responseExample":[
             {
-                "id": 25,
+                "id": 4,
                 "type": "smcq",
                 "QNumber": 1,
                 "grade": 5,
@@ -2120,19 +2124,19 @@
                 "attachment": null,
                 "options": [
                     {
-                        "id": 56,
+                        "id": 4,
                         "isRight": true,
                         "text": "9",
                         "Studentanswer": true
                     },
                     {
-                        "id": 57,
+                        "id": 5,
                         "isRight": false,
                         "text": "6",
                         "Studentanswer": false
                     },
                     {
-                        "id": 58,
+                        "id": 6,
                         "isRight": false,
                         "text": "1",
                         "Studentanswer": false
@@ -2140,23 +2144,24 @@
                 ]
             },
             {
-                "id": 26,
+                "id": 5,
                 "type": "written",
-                "QNumber": 2,
+                "QNumber": 1,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null
+                "attachment": null,
+                "Studentanswer": "it is a layer around the Earth "
             },
             {
-                "id": 27,
+                "id": 6,
                 "type": "attachment",
-                "QNumber": 3,
+                "QNumber": 1,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null
+                "attachment": null,
+                "Studentanswer": "default.png"
             }
         ]
-        
     },
 
 
