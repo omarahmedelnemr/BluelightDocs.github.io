@@ -173,12 +173,12 @@
         ],
         "requestExample":{
             "name":"private School",
-            "logo":"https://newImage",
+            "logo":"http://newImage",
             "studentsNum":130
         },
         "responseExample":{
             "name": "private School",
-            "logo": "https://newImage",
+            "logo": "http://newImage",
             "number_of_students": 130,
             "id": 3
         },
@@ -386,7 +386,7 @@
         "requestExample":{
             "studentID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/file/2131xaas675546578.png",
+            "img_dir":"http://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":13
         },
         "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
@@ -456,7 +456,7 @@
         "requestExample":{
             "schoolID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/file/2131xaas675546578.png",
+            "img_dir":"http://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":41,
             "subject":"math",
             "role":"normal"
@@ -531,7 +531,7 @@
         "requestExample":{
             "teacherID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/file/2131xaas675546578.png",
+            "img_dir":"http://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":41
         },
         "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
@@ -622,7 +622,7 @@
         "requestExample":{
             "schoolID":1,
             "name":"Mohamed Elsaid Slama",
-            "img_dir":"https://api.bluelightlms.com/file/2131675546578.png",
+            "img_dir":"http://api.bluelightlms.com/file/2131675546578.png",
             "age":41,
             "students":[1,2]
 
