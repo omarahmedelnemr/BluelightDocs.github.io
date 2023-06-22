@@ -802,7 +802,7 @@
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
-                "Studentanswer": "default.png"
+                "Studentattachment": ["test.png"]
             }
         ]
         
@@ -938,7 +938,7 @@
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
-                "Studentanswer": "default.png"
+                "Studentattachment": ["test.png"]
             }
         ]
     },
@@ -1236,7 +1236,7 @@
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
-                "Studentanswer": "default.png"
+                "Studentattachment": ["test.png"]
             }
         ]
         
@@ -1552,7 +1552,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null
+                "attachments": null
             },
             {
                 "id": 27,
@@ -1560,7 +1560,9 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null
+                "attachments": null,
+                "Studentattachment": []
+
             }
         ]
         
@@ -2194,7 +2196,7 @@
                 "grade": 10,
                 "questionText": "upload You id Image",
                 "attachment": null,
-                "Studentanswer": "default.png"
+                "Studentattachment": ["test.png"]
             }
         ]
     },
@@ -2545,7 +2547,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null,
+                "attachment": [],
                 "Studentanswer": "it is a layer around the Earth "
             },
             {
@@ -2554,8 +2556,13 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null,
-                "Studentanswer": "default.png"
+                "attachment": [
+                    {
+                        "id": 1,
+                        "attachmentDir": "12.png"
+                    }
+                ],
+                "Studentattachment": ["test.png"]
             }
         ]
     },
