@@ -1742,6 +1742,21 @@
         ]
     },
     {
+        "endpoint":"/student/eventsCount",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All The unseen Events Count",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Student's Classroom"
+            }
+            
+        ],
+        "responseDescription":"Receives a Number unseen Events",
+        "responseExample":{"count":2}
+    },
+    {
         "endpoint":"/student/event",
         "method":"Get",
         "description":"The Endpoint Used to get a Specific Event Info",
