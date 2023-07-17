@@ -1897,7 +1897,7 @@
             
         ],
         "requestExample":{
-            "classroomID": ["E3/1","E3/2"],
+            "classroomsID": ["E3/1","E3/2"],
             "courseID": 1,
             "teacherID":1,
             "name": "sheet1",
