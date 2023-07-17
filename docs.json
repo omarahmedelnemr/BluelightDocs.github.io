@@ -1767,7 +1767,7 @@
         }
     },
     {
-        "endpoint":"/student/Attendance",
+        "endpoint":"/student/AttendanceList",
         "method":"Get",
         "description":"The Endpoint Used to Show Student Attendance Records",
         "parameters":[
@@ -1792,6 +1792,36 @@
                 }
             }
         ]
+    },
+    {
+        "endpoint":"/student/AttendanceCount",
+        "method":"Get",
+        "description":"The Endpoint Used to Show Student Attendance Times as a number, for Ex. he attended 2 classes",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+        ],
+        "responseDescription":"Receives a Number showing Student's Attendace Times In Total Classes ",
+        "responseExample":{"count":3}
+    },
+    {
+        "endpoint":"/student/totalAttendance",
+        "method":"Get",
+        "description":"The Endpoint Used to Show Student Attendance and absence Times in total",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+        ],
+        "responseDescription":"Receives a Number showing Student's Attendace and absence Times In Total  ",
+        "responseExample":{"count":3}
     },
     {
         "endpoint":"/student/timetable",
