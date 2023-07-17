@@ -1086,6 +1086,23 @@
         
     },
     {
+        "endpoint":"/student/totalHomeworkCount",
+        "method":"GET",
+        "description":"The Endpoint Used to get How Meny Homework are Assinged to Student's Class wheather Submitted or not",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives a Number of Total Homework",
+        "responseExample":{
+            "count":2
+        }
+        
+    },
+    {
         "endpoint":"/student/homeworkHeader",
         "method":"GET",
         "description":"The Endpoint Used to Get All Details like Homework Title, grades,   About Specific Homework using it's ID",
@@ -1397,6 +1414,23 @@
         "endpoint":"/student/ExamsCount",
         "method":"GET",
         "description":"The Endpoint Used to get How Meny Exams are Assinged to Student's Class and are Not Submitted yet",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives a Number of Assigned Exams",
+        "responseExample":{
+            "count":2
+        }
+        
+    },
+    {
+        "endpoint":"/student/totalExamsCount",
+        "method":"GET",
+        "description":"The Endpoint Used to get How Meny Exams are Assinged to Student's Class wheather Submitted or not",
         "parameters":[
             {
                 "paramName":"studentID",
