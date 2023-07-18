@@ -1694,6 +1694,11 @@
                 "paramName":"classroomID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The Student's Classroom"
+            },
+            {
+                "paramName":"schoolID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
             }
             
         ],
