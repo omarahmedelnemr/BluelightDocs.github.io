@@ -1811,6 +1811,26 @@
         "responseExample":"Done"
     },
     {
+        "endpoint":"/student/favoriteCourse",
+        "method":"DELETE",
+        "description":"The Endpoint Used to remove a Course from Favorite",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
+            },
+            {
+                "paramName":"courseID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Course"
+            }
+            
+        ],
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors",
+        "responseExample":"Done"
+    },
+    {
         "endpoint":"/student/courseAssingments",
         "method":"GET",
         "description":"The Endpoint Used to Get Assingments or Homeworks Related to a Selected Course",
