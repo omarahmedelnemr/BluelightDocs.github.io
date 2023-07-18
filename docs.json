@@ -1717,7 +1717,9 @@
                     "img_dir": "https://api.bluelightlms.com/profilepic/123454.png",
                     "age": 49,
                     "role": "normal"
-                }
+                },
+                "favorite": true
+
             },
             {
                 "id": 2,
@@ -1732,7 +1734,59 @@
                     "img_dir": "https://api.bluelightlms.com/profilepic/123454.png",
                     "age": 54,
                     "role": "normal"
-                }
+                },
+                "favorite": false
+
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/favoriteCourses",
+        "method":"GET",
+        "description":"The Endpoint Used to the List of Courses that Marked as Favorite",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+        ],
+        "responseDescription":"Receives a List of All Favorite Course Enrolled",
+        "responseExample":[
+            {
+                "id": 1,
+                "name": "math",
+                "arName": "",
+                "targetLevel": "kg1",
+                "score": 150,
+                "teacher": {
+                    "id": 1,
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "",
+                    "img_dir": "https://api.bluelightlms.com/profilepic/123454.png",
+                    "age": 49,
+                    "role": "normal"
+                },
+                "favorite": true
+
+            },
+            {
+                "id": 2,
+                "name": "Arabic",
+                "arName": "",
+                "targetLevel": "kg1",
+                "score": 200,
+                "teacher": {
+                    "id": 2,
+                    "name": "ahmed Mahmoud mohamed",
+                    "arName": "",
+                    "img_dir": "https://api.bluelightlms.com/profilepic/123454.png",
+                    "age": 54,
+                    "role": "normal"
+                },
+                "favorite": true
+
             }
         ]
     },
