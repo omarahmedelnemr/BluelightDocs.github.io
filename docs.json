@@ -1732,6 +1732,114 @@
         ]
     },
     {
+        "endpoint":"/student/courseAssingments",
+        "method":"GET",
+        "description":"The Endpoint Used to Get Assingments or Homeworks Related to a Selected Course",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
+            }, 
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Student's Classroom"
+            }, 
+            {
+                "paramName":"courseName",
+                "paramType":"string",
+                "paramDescription":"Take The Name of The Course (math, arabic, ...)"
+            } 
+            
+        ],
+        "responseDescription":"Receives a List of All Course Assingments",
+        "responseExample":[
+            {
+                "id": 121,
+                "submitted": false,
+                "grade": null,
+                "graded": false,
+                "homework": {
+                    "id": 8,
+                    "name": "sheet2",
+                    "description": "Solve The Following Questions:",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T20:10:10.000Z",
+                    "due_date": "2023-07-20T23:27:43.000Z"
+                }
+            },
+            {
+                "id": 481,
+                "submitted": false,
+                "grade": null,
+                "graded": false,
+                "homework": {
+                    "id": 17,
+                    "name": "sheet 2",
+                    "description": "Solve The Following Questions:",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T20:10:10.000Z",
+                    "due_date": "2023-07-12T15:41:59.000Z"
+                }
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/courseExams",
+        "method":"GET",
+        "description":"The Endpoint Used to Get Exams Related to a Selected Course",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
+            }, 
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Student's Classroom"
+            }, 
+            {
+                "paramName":"courseName",
+                "paramType":"string",
+                "paramDescription":"Take The Name of The Course (math, arabic, ...)"
+            } 
+            
+        ],
+        "responseDescription":"Receives a List of All Course Exams",
+        "responseExample":[
+            {
+                "id": 121,
+                "submitted": false,
+                "grade": null,
+                "graded": false,
+                "exam": {
+                    "id": 8,
+                    "name": "sheet2",
+                    "description": "Solve The Following Questions:",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T20:10:10.000Z",
+                    "due_date": "2023-07-20T23:27:43.000Z"
+                }
+            },
+            {
+                "id": 481,
+                "submitted": false,
+                "grade": null,
+                "graded": false,
+                "exam": {
+                    "id": 17,
+                    "name": "sheet 2",
+                    "description": "Solve The Following Questions:",
+                    "grade": 10,
+                    "publish_date": "2020-12-12T20:10:10.000Z",
+                    "due_date": "2023-07-12T15:41:59.000Z"
+                }
+            }
+        ]
+    },
+    {
         "endpoint":"/student/CourseAnnouncement",
         "method":"GET",
         "description":"The Endpoint Used to Get All Announcements Posted in That Course",
