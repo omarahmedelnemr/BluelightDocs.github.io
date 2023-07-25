@@ -1949,9 +1949,9 @@
                 "paramDescription":"Take The ID of The Student's Classroom"
             }, 
             {
-                "paramName":"courseID",
+                "paramName":"courseName",
                 "paramType":"string",
-                "paramDescription":"Take The ID of The Course"
+                "paramDescription":"Take The Name of The Course (math, arabic, ...)"
             }
             
         ],
@@ -3053,9 +3053,14 @@
                 "paramDescription":"Take The ID of The Student To Target His/Her Parents"
             },
             {
+                "paramName":"sendTo",
+                "paramType":"String",
+                "paramDescription":"The Target of the Message, it take one of the Values (student,parent) to determine weather it is will be Sent to Student or Parent"
+            },
+            {
                 "paramName":"relation",
                 "paramType":"String",
-                "paramDescription":"the Relation Between the Student and the Targeted parent , weather 'father' or 'mother' "
+                "paramDescription":"this is set only in the case of sendTo Parent, and it is the Relation Between the Student and the Targeted parent , weather 'father' or 'mother' "
             },
             {
                 "paramName":"title",
@@ -3072,6 +3077,7 @@
         "requestExample":{
             "teacherID":1,
             "studentID":23,
+            "sendTo":"parent",
             "relation":"father",
             "title":"Update of Omar Progress",
             "bodyText":"Omar has Been Doing Great in the last Few Week and i wanted to Thank You For That"
