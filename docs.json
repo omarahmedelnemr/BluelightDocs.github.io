@@ -125,13 +125,26 @@
                 "paramName":"file",
                 "paramType":"file",
                 "paramDescription":"The Image to be Uploaded, (the Name of the Field is File no matter what the File name is, the Server will Generate a New One)"
+            },
+            {
+                "paramName":"type",
+                "paramType":"String",
+                "paramDescription":"(optional) the type of user you want to change his profile, (student, teacher, parent) if you provide this parameter with the next Parameter 'id', it means upload the picture and change user's picture entry in Database, if you didn't provide them, it means Just upload the image and give me it name in the Database "
+            },
+            {
+                "paramName":"id",
+                "paramType":"number",
+                "paramDescription":"(optional) the id of ther User you want to change his Profile Picture"
             }
             
         ],
-        "responseExample":"214124223.png",
+        "responseExample":{
+            "message":"uploaded",
+            "fileName":"214124223.png"
+        },
 
 
-        "responseDescription":"Receives The name of the Uploaded Picture on the Server to Be Stored as String in Database , Otherwise Reacives 'No files were uploaded' if the field File is empty or 'File Type is Not Supported' is the uploaded File Type is Not Supported,  or one of the Common Errors"
+        "responseDescription":"Receives dictionary with two value,'message' which will be wheather error happend, or just uploaded if you didn't provide type and id, or uploaded and user updated if you provide user and id,the second value 'fileName',which is The name of the Uploaded Picture on the Server to Be Stored as String in Database , Otherwise Reacives 'No files were uploaded' if the field File is empty or 'File Type is Not Supported' is the uploaded File Type is Not Supported,  or one of the Common Errors"
     },
     {
         "endpoint":"/file/(filename)",
