@@ -2159,7 +2159,38 @@
 
 
 
-
+    {
+        "endpoint":"/teacher/classrooms",
+        "method":"Get",
+        "description":"The Endpoint Used to Get The List Classrooms which  The Teacher is Teaching",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Teacher"
+            }
+            
+        ],
+        "responseDescription":"Receives a list of Classrooms arranged By The Subjects That the Teacher is Responsible For",
+        "responseExample":{
+            "math": [
+                {
+                    "id": "kg1/1",
+                    "name": "1/1"
+                },
+                {
+                    "id": "E1/2",
+                    "name": "1/2"
+                }
+            ],
+            "Arabic": [
+                {
+                    "id": "kg1/1",
+                    "name": "1/1"
+                }
+            ]
+        }
+    },
     {
         "endpoint":"/teacher/studentsList",
         "method":"Get",
