@@ -318,6 +318,11 @@
                 "paramDescription":"The Age of the Student"
             },
             {
+                "paramName":"gender",
+                "paramType":"String",
+                "paramDescription":"The Gender of the Student weather 'male' or 'female'"
+            },
+            {
                 "paramName":"classroom",
                 "paramType":"String",
                 "paramDescription":"THe ID of the Classrom Which Student Will Be Registered in"
@@ -328,6 +333,7 @@
             "name":"Omar Mohamed Ahmed Abd-ElSamee",
             "img_dir":"",
             "age":15,
+            "gender":"male",
             "classroom":"E3/2"
         },
         "responseDescription":"Receives Student Data, OtherWise, Reacives one of the Common Errors"
@@ -394,13 +400,19 @@
                 "paramName":"age",
                 "paramType":"Number",
                 "paramDescription":"The Age of the Stduent"
+            },
+            {
+                "paramName":"gender",
+                "paramType":"String",
+                "paramDescription":"The Gender of the Student weather 'male' or 'female'"
             }
         ],
         "requestExample":{
             "studentID":1,
             "name":"Mohamed Elsaid Slama",
             "img_dir":"http://api.bluelightlms.com/file/2131xaas675546578.png",
-            "age":13
+            "age":13,
+            "gender":"male"
         },
         "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
@@ -413,19 +425,24 @@
                 "id": 8,
                 "name": "Omar Mohamed Ahmed Abd-ElSamee",
                 "img_dir": "",
-                "age": 14
+                "age": 14,
+                "gender":"male"
             },
             {
                 "id": 9,
                 "name": "Mohamed Omar Ahmed Abd-ElSamee",
                 "img_dir": "",
-                "age": 15
+                "age": 15,
+                "gender":"male"
+
             },
             {
                 "id": 10,
                 "name": "Ahmed Mohamed Omar Abd-ElSamee",
                 "img_dir": "",
-                "age": 14
+                "age": 14,
+                "gender":"male"
+
             }
         ],
         "responseDescription":"Receives a List of All Students in The School if Went Well, OtherWise, Reacives one of the Common Errors"
@@ -456,6 +473,11 @@
                 "paramDescription":"The Age of the Teacher"
             },
             {
+                "paramName":"gender",
+                "paramType":"String",
+                "paramDescription":"The Gender of the Teacher weather 'male' or 'female'"
+            },
+            {
                 "paramName":"subject",
                 "paramType":"String",
                 "paramDescription":"The Subject that The Teacher Teaching"
@@ -471,6 +493,7 @@
             "name":"Mohamed Elsaid Slama",
             "img_dir":"http://api.bluelightlms.com/file/2131xaas675546578.png",
             "age":41,
+            "gender":"male",
             "subject":"math",
             "role":"normal"
 
@@ -539,13 +562,19 @@
                 "paramName":"age",
                 "paramType":"Number",
                 "paramDescription":"The Age of the Teacher"
+            },
+            {
+                "paramName":"gender",
+                "paramType":"String",
+                "paramDescription":"The Gender of the Teacher weather 'male' or 'female'"
             }
         ],
         "requestExample":{
             "teacherID":1,
             "name":"Mohamed Elsaid Slama",
             "img_dir":"http://api.bluelightlms.com/file/2131xaas675546578.png",
-            "age":41
+            "age":41,
+            "gender":"male"
         },
         "responseDescription":"Receives 'Done' if EveryThing Went Well, OtherWise, Reacives one of the Common Errors"
     },
@@ -558,45 +587,22 @@
                 "id": 8,
                 "name": "Omar Mohamed Ahmed Abd-ElSamee",
                 "img_dir": "",
-                "age": 41
+                "age": 41,
+                "gender":"male"
             },
             {
                 "id": 9,
                 "name": "Mohamed Omar Ahmed Abd-ElSamee",
                 "img_dir": "",
-                "age": 43
+                "age": 43,
+                "gender":"male"
             },
             {
                 "id": 10,
                 "name": "Ahmed Mohamed Omar Abd-ElSamee",
                 "img_dir": "",
-                "age": 35
-            }
-        ],
-        "responseDescription":"Receives a List of All Teachers in The School if Went Well, OtherWise, Reacives one of the Common Errors"
-    },
-    {
-        "endpoint":"/admin/allTeachers",
-        "method":"Get",
-        "description":"Return all Teachers In The School",
-        "responseExample":[
-            {
-                "id": 8,
-                "name": "Omar Mohamed Ahmed Abd-ElSamee",
-                "img_dir": "",
-                "age": 41
-            },
-            {
-                "id": 9,
-                "name": "Mohamed Omar Ahmed Abd-ElSamee",
-                "img_dir": "",
-                "age": 43
-            },
-            {
-                "id": 10,
-                "name": "Ahmed Mohamed Omar Abd-ElSamee",
-                "img_dir": "",
-                "age": 35
+                "age": 35,
+                "gender":"male"
             }
         ],
         "responseDescription":"Receives a List of All Teachers in The School if Went Well, OtherWise, Reacives one of the Common Errors"
@@ -627,6 +633,16 @@
                 "paramDescription":"The Age of the Parent"
             },
             {
+                "paramName":"gender",
+                "paramType":"String",
+                "paramDescription":"The Gender of the Parent weather 'male' or 'female'"
+            },
+            {
+                "paramName":"relation",
+                "paramType":"Number",
+                "paramDescription":"The Relation Between the parent and the Student weather 'father' or 'mother'"
+            },
+            {
                 "paramName":"students",
                 "paramType":"List",
                 "paramDescription":"The List Providing The Students ID's That Parent is Responsoble For, might be one Students or two or eny Number"
@@ -637,6 +653,8 @@
             "name":"Mohamed Elsaid Slama",
             "img_dir":"http://api.bluelightlms.com/file/2131675546578.png",
             "age":41,
+            "gender":"male",
+            "relation":"father",
             "students":[1,2]
 
         },
@@ -2377,31 +2395,40 @@
         "responseDescription":"Receives a List of Homeworks That The Teacher Posted With how many Submission Need to Be Graded in Each",
         "responseExample":[
             {
-                "id": 19,
-                "name": "sheet1",
-                "description": "solve it student asap",
-                "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null,
-                "NotGraded": 0
-            },
-            {
-                "id": 21,
+                "id": 1,
                 "name": "sheet2",
-                "description": "solve it student asap",
-                "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null,
-                "NotGraded": 1
-            },
-            {
-                "id": 29,
-                "name": "sheet1",
                 "description": "Solve The Following Questions:",
                 "grade": 10,
                 "publish_date": "2020-12-12T18:10:10.000Z",
                 "due_date": null,
-                "NotGraded": 0
+                "course": {
+                    "id": 2,
+                    "name": "Arabic",
+                    "arName": "",
+                    "targetLevel": "kg1",
+                    "score": 200
+                },
+                "NotGraded": 0,
+                "totalSubmission": 0,
+                "NotSubmitted": 40
+            },
+            {
+                "id": 2,
+                "name": "sheet2",
+                "description": "Solve The Following Questions:",
+                "grade": 10,
+                "publish_date": "2020-12-12T18:10:10.000Z",
+                "due_date": null,
+                "course": {
+                    "id": 2,
+                    "name": "Arabic",
+                    "arName": "",
+                    "targetLevel": "kg1",
+                    "score": 200
+                },
+                "NotGraded": 1,
+                "totalSubmission": 1,
+                "NotSubmitted": 79
             }
         ]
     },
@@ -2743,7 +2770,17 @@
                 "grade": 10,
                 "publish_date": "2020-12-12T18:10:10.000Z",
                 "due_date": null,
-                "NotGraded": 0
+                "course": {
+                    "id": 1,
+                    "name": "math",
+                    "arName": "",
+                    "targetLevel": "kg1",
+                    "score": 150
+                },
+                "NotGraded": 0,
+                "totalSubmission": 0,
+                "NotSubmitted": 80
+
             },
             {
                 "id": 21,
@@ -2752,8 +2789,16 @@
                 "grade": 10,
                 "publish_date": "2020-12-12T18:10:10.000Z",
                 "due_date": null,
-                "NotGraded": 1
-            },
+                "course": {
+                    "id": 1,
+                    "name": "math",
+                    "arName": "",
+                    "targetLevel": "kg1",
+                    "score": 150
+                },
+                "NotGraded": 0,
+                "totalSubmission": 0,
+                "NotSubmitted": 80            },
             {
                 "id": 29,
                 "name": "Quiz 3",
@@ -2761,8 +2806,16 @@
                 "grade": 10,
                 "publish_date": "2020-12-12T18:10:10.000Z",
                 "due_date": null,
-                "NotGraded": 0
-            }
+                "course": {
+                    "id": 1,
+                    "name": "math",
+                    "arName": "",
+                    "targetLevel": "kg1",
+                    "score": 150
+                },
+                "NotGraded": 0,
+                "totalSubmission": 0,
+                "NotSubmitted": 80            }
         ]
     },
     {
