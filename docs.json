@@ -149,7 +149,16 @@
     {
         "endpoint":"/file/(filename)",
         "method":"get",
-        "description":"used To Get or Download a File from the Server, (filename) should be replaced with The Actual File Name Which is returned in upload Endpoint, somthing like 123456.png",
+        "description":"used To Get a File from the Server, (filename) should be replaced with The Actual File Name Which is returned in upload Endpoint, somthing like 123456.png",
+        
+
+
+        "responseDescription":"Receives The image or a file that matchs the name provided"
+    },
+    {
+        "endpoint":"/download/(filename)",
+        "method":"get",
+        "description":"used To Download a File from the Server, (filename) should be replaced with The Actual File Name Which is returned in upload Endpoint, somthing like 123456.pdf",
         
 
 
