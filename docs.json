@@ -804,7 +804,7 @@
                 "QNumber": 1,
                 "grade": 5,
                 "questionText": "What is 3*3",
-                "attachment": null,
+                "attachments": null,
                 "options": [
                     {
                         "id": 4,
@@ -832,7 +832,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null,
+                "attachments": null,
                 "Studentanswer": "it is a layer around the Earth "
             },
             {
@@ -841,7 +841,7 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null,
+                "attachments": null,
                 "Studentattachment": ["test.png"]
             }
         ]
@@ -940,7 +940,7 @@
                 "QNumber": 1,
                 "grade": 5,
                 "questionText": "What is 3*3",
-                "attachment": null,
+                "attachments": null,
                 "options": [
                     {
                         "id": 4,
@@ -968,7 +968,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null,
+                "attachments": null,
                 "Studentanswer": "it is a layer around the Earth "
             },
             {
@@ -977,7 +977,7 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null,
+                "attachments": null,
                 "Studentattachment": ["test.png"]
             }
         ]
@@ -1255,7 +1255,7 @@
                 "QNumber": 1,
                 "grade": 5,
                 "questionText": "What is 3*3",
-                "attachment": null,
+                "attachments": null,
                 "options": [
                     {
                         "id": 4,
@@ -1283,7 +1283,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null,
+                "attachments": null,
                 "Studentanswer": "it is a layer around the Earth "
             },
             {
@@ -1292,7 +1292,7 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null,
+                "attachments": null,
                 "Studentattachment": ["test.png"]
             }
         ]
@@ -1598,7 +1598,7 @@
                 "QNumber": 1,
                 "grade": 5,
                 "questionText": "What is 3*3",
-                "attachment": null,
+                "attachments": null,
                 "options": [
                     {
                         "id": 56,
@@ -2569,7 +2569,7 @@
                 "QNumber": 1,
                 "grade": 5,
                 "questionText": "What is 3*3",
-                "attachment": null,
+                "attachments": null,
                 "options": [
                     {
                         "id": 4,
@@ -2597,7 +2597,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": null,
+                "attachments": null,
                 "Studentanswer": "it is a layer around the Earth "
             },
             {
@@ -2606,7 +2606,7 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": null,
+                "attachments": null,
                 "Studentattachment": ["test.png"]
             }
         ]
@@ -2956,7 +2956,7 @@
                 "QNumber": 1,
                 "grade": 5,
                 "questionText": "What is 3*3",
-                "attachment": null,
+                "attachments": null,
                 "options": [
                     {
                         "id": 4,
@@ -2984,7 +2984,7 @@
                 "QNumber": 2,
                 "grade": 10,
                 "questionText": "Write What You Know About Atmosphere",
-                "attachment": [],
+                "attachments": [],
                 "Studentanswer": "it is a layer around the Earth "
             },
             {
@@ -2993,7 +2993,7 @@
                 "QNumber": 3,
                 "grade": 10,
                 "questionText": "upload You id Image",
-                "attachment": [
+                "attachments": [
                     {
                         "id": 1,
                         "attachmentDir": "12.png"
@@ -3048,7 +3048,7 @@
             "title":"testTitle",
             "description":"TestDesc",
             "publish_date":"2020-12-12 08:08:08",
-            "attachment":null,
+            "attachments":null,
             "teacherID":1,
             "targetClassrooms":["E3/2","E3/1"]
         
