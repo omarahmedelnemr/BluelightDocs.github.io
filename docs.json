@@ -33,7 +33,9 @@
             "img_dir": "http",
             "age": 14,
             "classroom": "E3/1",
-            "role": "student"
+            "role": "student",
+            "arName":"عمر",
+            "gender":"male"
         },
         "responseDescription":"Receives user Info to be saved in Local Storage and a jwt is sent as a cookie with the users Data OtherWise, Reacives user not Found or wrong password if the password is wrong"
     },
