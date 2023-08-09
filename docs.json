@@ -1332,6 +1332,11 @@
                 "paramDescription":"Take The ID of The Homework"
             },
             {
+                "paramName":"submissionDate",
+                "paramType":"Date",
+                "paramDescription":"Take the Date of the Submission sent By a User"
+            },
+            {
                 "paramName":"answers",
                 "paramType":"Object",
                 "paramDescription":"Take The List Of Answers as the Example"
