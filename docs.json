@@ -24,8 +24,8 @@
             
         ],
         "requestExample":{
-            "username":"omar_ahmed",
-            "password":"testPassword"
+            "username":"kariem_elsayd",
+            "password":"myschool"
         },
         "responseExample":{
             "id": 8,
