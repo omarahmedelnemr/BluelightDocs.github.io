@@ -763,6 +763,11 @@
                 "paramName":"homeworkID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The Homework"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
             }
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
@@ -899,6 +904,11 @@
                 "paramName":"examID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The Exam"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
             }
         ],
         "responseDescription":"Receives all the Data Related To That Exam",
@@ -1153,6 +1163,11 @@
                 "paramName":"homeworkID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The Homework"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
             }
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
@@ -1495,6 +1510,11 @@
                 "paramName":"examID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The exam"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
             }
         ],
         "responseDescription":"Receives all the Data Related To That Exam",
@@ -2528,6 +2548,11 @@
                 "paramName":"homeworkID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The Homework"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
             }
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
@@ -2915,6 +2940,11 @@
                 "paramName":"examID",
                 "paramType":"string",
                 "paramDescription":"Take The ID of The Exam"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"Number",
+                "paramDescription":"Take The ID of The Student"
             }
         ],
         "responseDescription":"Receives all the Data Related To That Exam",
