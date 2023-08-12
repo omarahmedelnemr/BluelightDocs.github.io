@@ -2038,9 +2038,9 @@
         ]
     },
     {
-        "endpoint":"/student/events",
+        "endpoint":"/student/messages",
         "method":"GET",
-        "description":"The Endpoint Used to Get All The Events Assigned To The Student Class, Like A Class Trip",
+        "description":"The Endpoint Used to Get All The Messages Sent To The Student, Like A Class Trip",
         "parameters":[
             {
                 "paramName":"classroomID",
@@ -2049,7 +2049,7 @@
             }
             
         ],
-        "responseDescription":"Receives a List of All Assigned Events",
+        "responseDescription":"Receives a List of All Sent Messgaes",
         "responseExample":[
             {
                 "id": 1,
@@ -2065,9 +2065,9 @@
         ]
     },
     {
-        "endpoint":"/student/eventsCount",
+        "endpoint":"/student/messagesCount",
         "method":"GET",
-        "description":"The Endpoint Used to Get All The unseen Events Count",
+        "description":"The Endpoint Used to Get All The unseen Messages Count",
         "parameters":[
             {
                 "paramName":"classroomID",
@@ -2076,13 +2076,13 @@
             }
             
         ],
-        "responseDescription":"Receives a Number unseen Events",
+        "responseDescription":"Receives a Number unseen Messages",
         "responseExample":{"count":2}
     },
     {
-        "endpoint":"/student/event",
+        "endpoint":"/student/message",
         "method":"Get",
-        "description":"The Endpoint Used to get a Specific Event Info",
+        "description":"The Endpoint Used to get a Specific message Info",
         "parameters":[
             {
                 "paramName":"targetID",
@@ -2091,7 +2091,7 @@
             }
             
         ],
-        "responseDescription":"Receives All The Data Related To That Event",
+        "responseDescription":"Receives All The Data Related To That message",
         "responseExample":{
             "id": 1,
             "seen": true,
