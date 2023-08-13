@@ -2038,9 +2038,9 @@
         ]
     },
     {
-        "endpoint":"/student/messages",
+        "endpoint":"/student/events",
         "method":"GET",
-        "description":"The Endpoint Used to Get All The Messages Sent To The Student, Like A Class Trip",
+        "description":"The Endpoint Used to Get All Events (The Public Messages) Sent To The Student, Like A Class Trip",
         "parameters":[
             {
                 "paramName":"classroomID",
@@ -2052,22 +2052,32 @@
         "responseDescription":"Receives a List of All Sent Messgaes",
         "responseExample":[
             {
-                "id": 1,
-                "seen": true,
-                "event": {
+                "id": 4,
+                "title": "Class Trip",
+                "description": "We Are Happy to announce about our Trip",
+                "publish_date": "2020-12-12T06:08:08.000Z",
+                "teacher": {
                     "id": 1,
-                    "title": "Zoo Trip",
-                    "description": "Come to ZOO Next Friday",
-                    "attachment": null,
-                    "publish_date": "2023-04-25T03:32:01.000Z"
-                }
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "مصطفي محمد مصطفي",
+                    "img_dir": "default.png",
+                    "age": 49,
+                    "gender": "male",
+                    "role": "normal"
+                },
+                "seen": false,
+                "attachments": [
+                    {
+                        "attachment": "fileName.pdf"
+                    }
+                ]
             }
         ]
     },
     {
-        "endpoint":"/student/messagesCount",
+        "endpoint":"/student/eventsCount",
         "method":"GET",
-        "description":"The Endpoint Used to Get All The unseen Messages Count",
+        "description":"The Endpoint Used to Get All The unseen Events Count",
         "parameters":[
             {
                 "paramName":"classroomID",
@@ -2076,33 +2086,96 @@
             }
             
         ],
+        "responseDescription":"Receives a Number unseen Events",
+        "responseExample":{"count":2}
+    },
+    {
+        "endpoint":"/student/seeEvent",
+        "method":"POST",
+        "description":"The Endpoint Used to Mark an Event as Seen",
+        "parameters":[
+            {
+                "paramName":"classroomID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Student's Classroom"
+            },
+            {
+                "paramName":"eventID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The event"
+            }
+            
+        ],
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors"
+    },
+    {
+        "endpoint":"/student/messages",
+        "method":"Get",
+        "description":"The Endpoint Used to get a all Private messages Sent to the Student",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+        ],
+        "responseDescription":"Receives All Private Messages",
+        "responseExample":[
+            {
+                "id": 1,
+                "title": "Update of Your Progress",
+                "bodyText": "Your Have Been Doing Greate the Last Semester, which makes us all happy about what your are doing",
+                "sendDate": "2023-08-13T01:52:47.000Z",
+                "seen": false,
+                "teacher": {
+                    "id": 1,
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "",
+                    "img_dir": "/profilepic/default.png",
+                    "age": 49,
+                    "gender": "",
+                    "role": "normal"
+                },
+                "attachments": [
+                    {
+                        "attachment": "01023.png"
+                    },
+                    {
+                        "attachment": "5667.png"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "endpoint":"/student/messagesCount",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All The unseen Private Messages Count",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+        ],
         "responseDescription":"Receives a Number unseen Messages",
         "responseExample":{"count":2}
     },
     {
-        "endpoint":"/student/message",
-        "method":"Get",
-        "description":"The Endpoint Used to get a Specific message Info",
+        "endpoint":"/student/seeMessage",
+        "method":"POST",
+        "description":"The Endpoint Used to Mark a Message as Seen",
         "parameters":[
             {
-                "paramName":"targetID",
-                "paramType":"number",
-                "paramDescription":"Take The ID of The Target (MenyToMeny JOin Table Entity ID)"
+                "paramName":"messageID",
+                "paramType":"string",
+                "paramDescription":"Take The ID of The Message"
             }
             
         ],
-        "responseDescription":"Receives All The Data Related To That message",
-        "responseExample":{
-            "id": 1,
-            "seen": true,
-            "event": {
-                "id": 1,
-                "title": "Zoo Trip",
-                "description": "Come to ZOO Next Friday",
-                "attachment": null,
-                "publish_date": "2023-04-25T03:32:01.000Z"
-            }
-        }
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors"
     },
     {
         "endpoint":"/student/AttendanceList",
