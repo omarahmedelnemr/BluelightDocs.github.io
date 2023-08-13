@@ -40,6 +40,62 @@
         "responseDescription":"Receives user Info to be saved in Local Storage and a jwt is sent as a cookie with the users Data OtherWise, Reacives user not Found or wrong password if the password is wrong"
     },
     {
+        "endpoint":"/forgetPassword",
+        "method":"POST",
+        "description":"used in Resting Password Procces to Confirm the National ID",
+        "parameters":[
+            {
+                "paramName":"username",
+                "paramType":"String",
+                "paramDescription":"The Username you use as Your Identifier"
+            },
+            {
+                "paramName":"nationalID",
+                "paramType":"String",
+                "paramDescription":"user's national ID, must be 14 Digit"
+            }
+            
+        ],
+        "requestExample":{
+            "username":"omar_ahmed",
+            "nationalID":"12345678901234"
+        },
+
+
+        "responseDescription":"Receives Authenticated if The Data is Correct, Otherwise Reacives user not Found or Wrong National ID if the National ID is wrong or one of the Common Errors"
+    },
+    {
+        "endpoint":"/resetPassword",
+        "method":"POST",
+        "description":"used in Resting Password Procces to Confirm the National ID",
+        "parameters":[
+            {
+                "paramName":"username",
+                "paramType":"String",
+                "paramDescription":"The Username you use as Your Identifier"
+            },
+            {
+                "paramName":"nationalID",
+                "paramType":"String",
+                "paramDescription":"user's national ID, must be 14 Digit"
+            },
+            {
+                "paramName":"newPassword",
+                "paramType":"String",
+                "paramDescription":"user's New Password"
+            }
+            
+        ],
+        "requestExample":{
+            "username":"omar_ahmed",
+            "nationalID":"12345678901234",
+            "newPassword":"myPassword"
+        },
+
+
+        "responseDescription":"Receives Done if The Data is Correct, Otherwise Reacives one of the Common Errors"
+    },
+    {
         "endpoint":"/editUsername",
         "method":"POST",
         "description":"used To Edit user's Username which is user to login",
