@@ -158,6 +158,49 @@
         "responseDescription":"Receives Done if The Data is Correct, Otherwise Reacives user not Found or wrong password if the password is wrong or one of the Common Errors"
     },
     {
+        "endpoint":"/IssuReport",
+        "method":"POST",
+        "description":"used To report an Issu or submit a Suggestion",
+        "parameters":[
+            {
+                "paramName":"userID",
+                "paramType":"Number",
+                "paramDescription":"THe user ID"
+            },
+            {
+                "paramName":"role",
+                "paramType":"String",
+                "paramDescription":"weather the User is student, teacher, or parent"
+            },
+            {
+                "paramName":"publish_date",
+                "paramType":"Date",
+                "paramDescription":"The Date that the issu was sent in"
+            },
+            {
+                "paramName":"title",
+                "paramType":"String",
+                "paramDescription":"The title of the Issu"
+            },
+            {
+                "paramName":"bodyText",
+                "paramType":"String",
+                "paramDescription":"The main Text of the issu"
+            }
+            
+        ],
+        "requestExample":{
+            "userID":1,
+            "role":"student",
+            "publish_date":"2023-5-23 12:43",
+            "title":"Error while login",
+            "bodyText":"i was try to Login multiple Times but cant event i am sure about the Entered Password and username"
+        },
+
+
+        "responseDescription":"Receives Done if The Data is Correct, Otherwise Reacives user not Found or wrong password if the password is wrong or one of the Common Errors"
+    },
+    {
         "endpoint":"/upload",
         "method":"POST",
         "description":"used To upload a File to The Files Server (Somthing like Database) the Supported File Types are [png,jpg,jpeg] for images, 'pdf' for files",
@@ -209,17 +252,12 @@
         "method":"get",
         "description":"used To Get a File from the Server, (filename) should be replaced with The Actual File Name Which is returned in upload Endpoint, somthing like 123456.png",
         
-
-
         "responseDescription":"Receives The image or a file that matchs the name provided"
     },
     {
         "endpoint":"/download/(filename)",
         "method":"get",
         "description":"used To Download a File from the Server, (filename) should be replaced with The Actual File Name Which is returned in upload Endpoint, somthing like 123456.pdf",
-        
-
-
         "responseDescription":"Receives The image or a file that matchs the name provided"
     },
     {
@@ -228,6 +266,43 @@
         "description":"used To Get or Download a Profile Picture from the Server, (filename) should be replaced with The Actual picture Name Which is returned in uploadProfilePic Endpoint, somthing like 123456.png",
         
         "responseDescription":"Receives The image that matchs the name provided"
+    },
+    {
+        "endpoint":"/allAvatars",
+        "method":"get",
+        "description":"used To Get all the  Avatars Stored in the Server",
+        "responseExample":[
+            {
+                "id":1,
+                "avatar":"123.png"
+            },
+            {
+                "id":2,
+                "avatar":"234.png"
+            }
+        ],
+        "responseDescription":"Receives All The Avatars List"
+    },
+    {
+        "endpoint":"/avatar/(avatarName)",
+        "method":"get",
+        "description":"used To Get an Avatar from the Server, (avatarName) should be replaced with The Actual avatar Name Which is returned in avatar uploading",
+        
+        "responseDescription":"Receives The image or a file that matchs the name provided"
+    },
+    {
+        "endpoint":"/newavatar",
+        "method":"POST",
+        "parameters":[
+            {
+                "paramName":"file",
+                "paramType":"file",
+                "paramDescription":"The Image to be Uploaded, (the Name of the Field is File no matter what the File name is, the Server will Generate a New One)"
+            }
+        ],
+        "description":"used To Get upload new Avatar (not a user Endpoint Just for System Admins)",
+        "responseExample":"214124223.png",
+        "responseDescription":"Receives The Uploaded Avatar Nmae"
     },
     {
         "endpoint":"/Admin/school",
