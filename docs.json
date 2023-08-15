@@ -284,6 +284,30 @@
         "responseDescription":"Receives All The Avatars List"
     },
     {
+        "endpoint":"/changeAvatar",
+        "method":"post",
+        "description":"used To Change User's Personal Avatar ( Profile Picture )",
+        "parameters":[
+            {
+                "paramName":"userID",
+                "paramType":"number",
+                "paramDescription":"Users ID"
+            },
+            {
+                "paramName":"role",
+                "paramType":"string",
+                "paramDescription":"Weather the user is student, teacher, or parent"
+            },
+            {
+                "paramName":"avatar",
+                "paramType":"string",
+                "paramDescription":"Avatar Name in the Server, which can Be Taken From AllAvatars Endpoint"
+            }
+        ],
+
+        "responseDescription":"Receives 'Done' if Every Thing Went Well,'Incorrect Role' if the role was wrong or one of The Common Errors"
+    },
+    {
         "endpoint":"/avatar/(avatarName)",
         "method":"get",
         "description":"used To Get an Avatar from the Server, (avatarName) should be replaced with The Actual avatar Name Which is returned in avatar uploading",
