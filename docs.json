@@ -1277,6 +1277,24 @@
         ]
     },
     {
+        "endpoint":"/student/homeworkGrades",
+        "method":"GET",
+        "description":"The Endpoint Used to get The Student Grades",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives Student's Grade and The Total Grade",
+        "responseExample":{
+            "grade": 25,
+            "totalGrade": 45
+        }
+        
+    },
+    {
         "endpoint":"/student/HomeworkCount",
         "method":"GET",
         "description":"The Endpoint Used to get How Meny Homework are Assinged to Student's Class and are Not Submitted yet",
@@ -1627,6 +1645,24 @@
                 }
             }
         ]
+    },
+    {
+        "endpoint":"/student/examGrades",
+        "method":"GET",
+        "description":"The Endpoint Used to get The Student Exams Grades",
+        "parameters":[
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+        ],
+        "responseDescription":"Receives Student's Grade and The Total Grade",
+        "responseExample":{
+            "grade": 25,
+            "totalGrade": 45
+        }
+        
     },
     {
         "endpoint":"/student/ExamsCount",
