@@ -1151,50 +1151,114 @@
         ]
     },
     {
-        "endpoint":"/parent/messagesList",
-        "method":"GET",
-        "description":"The Endpoint Used to get All Messages List Sent to a Parent from a Teahcer using Parent ID",
+        "endpoint":"/parent/messages",
+        "method":"Get",
+        "description":"The Endpoint Used to get a all messages Sent to the Parent",
         "parameters":[
-
+            {
+                "paramName":"parentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Parent"
+            },
+            {
+                "paramName":"studentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Student"
+            }
+            
+            
+        ],
+        "responseDescription":"Receives All Private Messages",
+        "responseExample":[
+            {
+                "id": 1,
+                "title": "Update of Your Progress",
+                "bodyText": "Your Have Been Doing Greate the Last Semester, which makes us all happy about what your are doing",
+                "sendDate": "2023-08-13T01:52:47.000Z",
+                "seen": true,
+                "teacher": {
+                    "id": 1,
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "",
+                    "img_dir": "default.png",
+                    "age": 49,
+                    "gender": "",
+                    "role": "normal"
+                },
+                "private": true,
+                "attachments": [
+                    {
+                        "attachment": "01023.png"
+                    },
+                    {
+                        "attachment": "5667.png"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "title": "testTitle",
+                "description": "TestDesc",
+                "sendDate": "2020-12-12T06:08:08.000Z",
+                "teacher": {
+                    "id": 1,
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "",
+                    "img_dir": "default.png",
+                    "age": 49,
+                    "gender": "",
+                    "role": "normal"
+                },
+                "private": false,
+                "attachments": []
+            }
+        ]
+    },
+    {
+        "endpoint":"/parent/messagesCount",
+        "method":"GET",
+        "description":"The Endpoint Used to Get All The unseen Messages Count",
+        "parameters":[
             {
                 "paramName":"parentID",
                 "paramType":"number",
                 "paramDescription":"Take The ID of The Parent"
             }
+            
         ],
-        "responseDescription":"Receives The List of Messages List Sent with only title and date, message Body is not Sent",
-        "responseExample":[
-            {
-                "id": 3,
-                "title": "Welcome",
-                "sendDate": "2023-06-09T22:38:23.000Z",
-                "seen": true
-            }
-        ]
+        "responseDescription":"Receives a Number unseen Messages",
+        "responseExample":{"count":2}
     },
     {
-        "endpoint":"/parent/message",
-        "method":"GET",
-        "description":"The Endpoint Used to get a Message Data (the Title, Body Text and Send Date) ",
+        "endpoint":"/parent/seeMessage",
+        "method":"POST",
+        "description":"The Endpoint Used to Mark a Message as Seen",
         "parameters":[
-
+            {
+                "paramName":"parentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Parent"
+            },
             {
                 "paramName":"messageID",
                 "paramType":"number",
                 "paramDescription":"Take The ID of The Message"
+            },
+            {
+                "paramName":"private",
+                "paramType":"boolean",
+                "paramDescription":"Take Weather the Message is Private or Public"
             }
+
+            
         ],
-        "responseDescription":"Receives The all Message Data Including Body Text",
-        "responseExample":{
-            "id": 3,
-            "title": "Welcome",
-            "bodyText": "Welcome Here  Sir, Your SOn is KInda Playable",
-            "sendDate": "2023-06-09T22:38:23.000Z",
-            "seen": true
-        }
+        "requestExample":{
+            "parentID":1,
+            "messageID":1,
+            "private":false
+        },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors"
     },
-
-
 
 
 
