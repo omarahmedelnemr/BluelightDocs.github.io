@@ -329,6 +329,89 @@
         "responseDescription":"Receives The Uploaded Avatar Nmae"
     },
     {
+        "endpoint":"/timetable",
+        "method":"GET",
+        "description":"Get a TimeTable according to Classroom ID",
+        "parameters":[
+
+            {
+                "paramName":"classroomID",
+                "paramType":"String",
+                "paramDescription":"the id of the Classroom"
+            }
+            
+        ],
+        "responseExample":{
+            "Sunday": {
+                "9:30 - 10:30": {
+                    "course": "Arabic",
+                    "teacher": "Mostafa mohamed Mostafa",
+                    "arTeacher": ""
+                },
+                "10:30 - 11:30": {
+                    "course": "English",
+                    "teacher": "ahmed Mahmoud mohamed",
+                    "arTeacher": ""
+                },
+                "11:30 - 12:30": {
+                    "course": "Arabic",
+                    "teacher": "ahmed mamdouh Mahmoud",
+                    "arTeacher": ""
+                },
+                "12:30 - 1:30": {
+                    "course": "math",
+                    "teacher": "ahmed mamdouh Mahmoud",
+                    "arTeacher": ""
+                }
+           },
+            "Monday": {
+                "9:30 - 10:30": {
+                    "course": "English",
+                    "teacher": "Mostafa mohamed Mostafa",
+                    "arTeacher": ""
+                },
+                "10:30 - 11:30": {
+                    "course": "Physics",
+                    "teacher": "ahmed Mahmoud mohamed",
+                    "arTeacher": ""
+                },
+                "11:30 - 12:30": {
+                    "course": "Chemistry",
+                    "teacher": "ahmed mamdouh Mahmoud",
+                    "arTeacher": ""
+                },
+                "12:30 - 1:30": {
+                    "course": "Arabic",
+                    "teacher": "mamdouh mamdouh mohamed",
+                    "arTeacher": ""
+                }
+            },
+            "Tusday": {
+                "9:30 - 10:30": {
+                    "course": "Arabic",
+                    "teacher": "Mostafa mohamed Mostafa",
+                    "arTeacher": ""
+                },
+                "10:30 - 11:30": {
+                    "course": "English",
+                    "teacher": "ahmed Mahmoud mohamed",
+                    "arTeacher": ""
+                },
+                "11:30 - 12:30": {
+                    "course": "Arabic",
+                    "teacher": "ahmed mamdouh Mahmoud",
+                    "arTeacher": ""
+                },
+                "12:30 - 1:30": {
+                    "course": "math",
+                    "teacher": "ahmed mamdouh Mahmoud",
+                    "arTeacher": ""
+                }
+            }
+        },
+        "responseDescription":"Receives The TimeTable"
+    },
+    {
         "endpoint":"/Admin/school",
         "method":"POST",
         "description":"Create New School",
