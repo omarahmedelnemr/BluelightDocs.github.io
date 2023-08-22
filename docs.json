@@ -1259,6 +1259,104 @@
         },
         "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors"
     },
+    {
+        "endpoint":"/parent/Message",
+        "method":"POST",
+        "description":"The Endpoint Used To Send a Message from Parent to Teacher",
+        "parameters":[
+            {
+                "paramName":"teacherID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Teacher"
+            },
+            {
+                "paramName":"parentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Parent"
+            },
+            {
+                "paramName":"sendDate",
+                "paramType":"Date",
+                "paramDescription":"The Date in Which the Message is Sent"
+            },
+            {
+                "paramName":"title",
+                "paramType":"String",
+                "paramDescription":"Take The Title of The Message"
+            },
+            {
+                "paramName":"bodyText",
+                "paramType":"String",
+                "paramDescription":"Take The Main Text of the Message"
+            },
+            {
+                "paramName":"attachments",
+                "paramType":"Object",
+                "paramDescription":"Take a list of all Attachment if Exist"
+            }
+
+            
+        ],
+        "requestExample":{
+            "teacherID": 3,
+            "parentID": 1,
+            "sendDate":"2023-8-10",
+            "title": "Confirm",
+            "bodyText": "i Have Seen Your Message, Thank You",
+            "attachments":["123test.png"]
+         },
+        "responseDescription":"Receives 'Done' if Every Thing Went Well, or one of The Common Errors"
+    },
+    {
+        "endpoint":"/parent/sentMessages",
+        "method":"get",
+        "description":"The Endpoint Used to Get all Sent Message by a Parent",
+        "parameters":[
+            {
+                "paramName":"parentID",
+                "paramType":"number",
+                "paramDescription":"Take The ID of The Parent"
+            }
+            
+        ],
+        "responseExample":[
+            {
+                "id": 1,
+                "title": "testTitle",
+                "bodyText": null,
+                "sendDate": "2020-12-12T06:08:08.000Z",
+                "teacher": {
+                    "id": 1,
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "",
+                    "img_dir": "/profilepic/default.png",
+                    "age": 49,
+                    "gender": "",
+                    "role": "normal"
+                },
+                "private": false,
+                "attachments": []
+            },
+            {
+                "id": 8,
+                "title": "test Public",
+                "bodyText": null,
+                "sendDate": "2020-12-12T06:08:08.000Z",
+                "teacher": {
+                    "id": 1,
+                    "name": "Mostafa mohamed Mostafa",
+                    "arName": "",
+                    "img_dir": "/profilepic/default.png",
+                    "age": 49,
+                    "gender": "",
+                    "role": "normal"
+                },
+                "private": false,
+                "attachments": []
+            }
+        ],
+        "responseDescription":"Receives a List of all Sent Messages, or one of The Common Errors"
+    },
 
 
 
