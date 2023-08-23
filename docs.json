@@ -1764,6 +1764,7 @@
         "requestExample":{
             "studentID":1,
             "homeworkID":1,
+            "submissionDate":"2023-10-12",
             "answers":[
                 {
                     "id": 1,
@@ -2123,6 +2124,11 @@
                 "paramDescription":"Take The ID of The Exam"
             },
             {
+                "paramName":"submissionDate",
+                "paramType":"Date",
+                "paramDescription":"Take the Date of the Submission sent By a User"
+            },
+            {
                 "paramName":"answers",
                 "paramType":"Object",
                 "paramDescription":"Take The List Of Answers as the Example"
@@ -2132,6 +2138,7 @@
         "requestExample":{
             "studentID":1,
             "examID":1,
+            "submissionDate":"2023-10-12",
             "answers":[
                 {
                     "id": 1,
