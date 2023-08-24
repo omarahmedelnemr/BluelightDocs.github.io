@@ -2596,17 +2596,22 @@
             }
             
         ],
-        "responseDescription":"Receives a list showing Student's Absense Times In Each Course ",
+        "responseDescription":"Receives a list showing Student's Attendance Times In Each Attendance Paper ",
         "responseExample":[
             {
-                "id": 4,
-                "absent": true,
-                "date": "2023-05-01T21:13:08.000Z",
-                "course": {
+                "id": 5,
+                "attend": false,
+                "attandancePaper": {
                     "id": 2,
-                    "teacherID": null,
-                    "name": "Physics",
-                    "score": 200
+                    "date": "2023-08-24T09:34:02.000Z"
+                }
+            },
+            {
+                "id": 11,
+                "attend": true,
+                "attandancePaper": {
+                    "id": 3,
+                    "date": "2023-08-24T09:34:54.000Z"
                 }
             }
         ]
@@ -2614,7 +2619,7 @@
     {
         "endpoint":"/student/AttendanceCount",
         "method":"Get",
-        "description":"The Endpoint Used to Show Student Attendance Times as a number, for Ex. he attended 2 classes",
+        "description":"The Endpoint Used to Show Student Attendance and Absence Times as a numbers",
         "parameters":[
             {
                 "paramName":"studentID",
@@ -2623,23 +2628,11 @@
             }
             
         ],
-        "responseDescription":"Receives a Number showing Student's Attendace Times In Total Classes ",
-        "responseExample":{"count":3}
-    },
-    {
-        "endpoint":"/student/totalAttendance",
-        "method":"Get",
-        "description":"The Endpoint Used to Show Student Attendance and absence Times in total",
-        "parameters":[
-            {
-                "paramName":"studentID",
-                "paramType":"number",
-                "paramDescription":"Take The ID of The Student"
-            }
-            
-        ],
-        "responseDescription":"Receives a Number showing Student's Attendace and absence Times In Total  ",
-        "responseExample":{"count":3}
+        "responseDescription":"Receives a Number showing Student's Attendace Absence Times In Total Classes ",
+        "responseExample":{
+            "attended": 10,
+            "absent": 2
+        }
     },
     {
         "endpoint":"/student/timetable",
