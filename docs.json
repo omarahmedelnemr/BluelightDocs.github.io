@@ -1010,19 +1010,22 @@
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
         "responseExample":{
-            "id": 54,
+            "id": 721,
             "submitted": true,
-            "grade": 15,
+            "grade": 8,
             "graded": true,
+            "submissionDate": "2023-09-11T16:08:06.000Z",
             "homework": {
-                "id": 29,
-                "name": "sheet1",
+                "id": 23,
+                "name": "MCQ sheet final 1",
                 "description": "Solve The Following Questions:",
-                "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null
+                "grade": 15,
+                "publish_date": "2023-08-08T17:44:53.000Z",
+                "due_date": "2023-09-09T16:07:51.000Z",
+                "unsubmitAfterGrading": true,
+                "latePenalty": 2
             }
-        }   
+        }
         
     },
     {
@@ -1151,20 +1154,25 @@
         ],
         "responseDescription":"Receives all the Data Related To That Exam",
         "responseExample":{
-            "id": 54,
+            "id": 81,
             "submitted": true,
-            "grade": 15,
+            "grade": 0,
             "graded": true,
-            "submissionDate": "2023-08-09T15:30:08.000Z",
+            "submissionDate": "2023-08-15T19:35:46.000Z",
             "exam": {
-                "id": 29,
-                "name": "sheet1",
-                "description": "Solve The Following Questions:",
+                "id": 3,
+                "name": "Quiz 2",
+                "description": "Solve The Following Questions",
                 "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null
+                "publish_date": "2020-12-12T20:10:10.000Z",
+                "due_date": "2023-08-14T23:20:10.000Z",
+                "duration": 10,
+                "randomQuestions": true,
+                "acceptLate": true,
+                "latePenalty": 0,
+                "showQuestionsAfterGrading": true
             }
-        }   
+        } 
         
     },
     {
@@ -1591,19 +1599,22 @@
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
         "responseExample":{
-            "id": 54,
+            "id": 721,
             "submitted": true,
-            "grade": 15,
+            "grade": 8,
             "graded": true,
+            "submissionDate": "2023-09-11T16:08:06.000Z",
             "homework": {
-                "id": 29,
-                "name": "sheet1",
+                "id": 23,
+                "name": "MCQ sheet final 1",
                 "description": "Solve The Following Questions:",
-                "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null
+                "grade": 15,
+                "publish_date": "2023-08-08T17:44:53.000Z",
+                "due_date": "2023-09-09T16:07:51.000Z",
+                "unsubmitAfterGrading": true,
+                "latePenalty": 2
             }
-        }   
+        }  
         
     },
     {
@@ -1962,19 +1973,25 @@
         ],
         "responseDescription":"Receives all the Data Related To That Exam",
         "responseExample":{
-                "id": 1,
-                "submitted": false,
-                "grade": null,
-                "submissionDate": null,
-                "exam": {
-                    "id": 1,
-                    "name": "Sheet 1",
-                    "description": "Solve The Following Questions:",
-                    "grade": 10,
-                    "publish_date": "2023-02-19T18:42:18.000Z",
-                    "due_date": "2023-02-19T18:42:18.000Z"
-                }
+            "id": 81,
+            "submitted": true,
+            "grade": 0,
+            "graded": true,
+            "submissionDate": "2023-08-15T19:35:46.000Z",
+            "exam": {
+                "id": 3,
+                "name": "Quiz 2",
+                "description": "Solve The Following Questions",
+                "grade": 10,
+                "publish_date": "2020-12-12T20:10:10.000Z",
+                "due_date": "2023-08-14T23:20:10.000Z",
+                "duration": 10,
+                "randomQuestions": true,
+                "acceptLate": true,
+                "latePenalty": 0,
+                "showQuestionsAfterGrading": true
             }
+        }
         
         
         
@@ -3039,19 +3056,22 @@
         ],
         "responseDescription":"Receives all the Data Related To That Homework",
         "responseExample":{
-            "id": 54,
+            "id": 721,
             "submitted": true,
-            "grade": 15,
+            "grade": 8,
             "graded": true,
+            "submissionDate": "2023-09-11T16:08:06.000Z",
             "homework": {
-                "id": 29,
-                "name": "sheet1",
+                "id": 23,
+                "name": "MCQ sheet final 1",
                 "description": "Solve The Following Questions:",
-                "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null
+                "grade": 15,
+                "publish_date": "2023-08-08T17:44:53.000Z",
+                "due_date": "2023-09-09T16:07:51.000Z",
+                "unsubmitAfterGrading": true,
+                "latePenalty": 2
             }
-        }   
+        }
         
     },
     {
@@ -3431,20 +3451,25 @@
         ],
         "responseDescription":"Receives all the Data Related To That Exam",
         "responseExample":{
-            "id": 54,
+            "id": 81,
             "submitted": true,
-            "grade": 15,
+            "grade": 0,
             "graded": true,
-            "submissionDate": "2023-08-09T15:30:08.000Z",
+            "submissionDate": "2023-08-15T19:35:46.000Z",
             "exam": {
-                "id": 29,
-                "name": "Quiz 1",
-                "description": "Solve The Following Questions:",
+                "id": 3,
+                "name": "Quiz 2",
+                "description": "Solve The Following Questions",
                 "grade": 10,
-                "publish_date": "2020-12-12T18:10:10.000Z",
-                "due_date": null
+                "publish_date": "2020-12-12T20:10:10.000Z",
+                "due_date": "2023-08-14T23:20:10.000Z",
+                "duration": 10,
+                "randomQuestions": true,
+                "acceptLate": true,
+                "latePenalty": 0,
+                "showQuestionsAfterGrading": true
             }
-        }   
+        }
         
     },
     {
